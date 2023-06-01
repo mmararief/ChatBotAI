@@ -1,8 +1,12 @@
 ﻿Imports System.IO
 Imports System.Net
+Imports System.Net.Http
+Imports System.Text
+
+Imports System.Web.UI.WebControls
 
 Public Class Chatbot
-    Dim OPENAI_API_KEY = "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"
+    Dim OPENAI_API_KEY = "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"
 
     Function callOpenAi(sQuestion As String, iMaxTokens As Integer, dTemperature As Double, sModel As String, top_p As Integer, frequency_penalty As Double, presence_penalty As Double)
         System.Net.ServicePointManager.SecurityProtocol =
@@ -66,5 +70,30 @@ Public Class Chatbot
 
         txtQuestion.Text = ""
 
+    End Sub
+
+    Private Async Sub btnWa_Click(sender As Object, e As EventArgs) Handles btnWa.Click
+        Dim nomor As String = txtNomer.Text.Trim()
+        If nomor.StartsWith("0") Then
+            nomor = "62" & nomor.Substring(1)
+        End If
+        Dim number As String = nomor & "@c.us" ' nomor telepon penerima
+
+        Dim pesan = txtChat.Text
+        Dim postData As String = "number=" & number & "&message=" & pesan
+        Using client As New HttpClient()
+            Dim content As New StringContent(postData, Encoding.UTF8, "application/x-www-form-urlencoded")
+            Try
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImFtbWFyIn0sImlhdCI6MTY3ODk2MjQ0MH0.qyZaVNiT_FlMXIV9J2K8L7gOAWmqE-NbwxtjM81NE6k")
+                Dim response As HttpResponseMessage = Await client.PostAsync("https://api-wa-ammar.herokuapp.com/send-message", content)
+                response.EnsureSuccessStatusCode()
+
+                'pesan berhasil terkirim
+                MessageBox.Show("Pesan berhasil terkirim ke nomor " & nomor & " dengan isi pesan: " & pesan)
+            Catch ex As HttpRequestException
+                'nomor tidak ditemukan
+                MessageBox.Show("Nomor tidak ditemukan.")
+            End Try
+        End Using
     End Sub
 End Class
