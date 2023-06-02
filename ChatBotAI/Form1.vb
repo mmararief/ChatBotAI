@@ -1,4 +1,5 @@
-﻿Imports MySqlConnector
+﻿Imports Guna.UI2.WinForms
+Imports MySqlConnector
 Public Class Form1
     Dim connectionString As String = "server=103.153.3.20;user id=webkadupa_ammar;password=Juken12345678;database=webkadupa_cafe"
     Dim connection As New MySqlConnection(connectionString)
@@ -35,5 +36,27 @@ Public Class Form1
         Finally
             connection.Close()
         End Try
+    End Sub
+
+    Private Sub txtUsername_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUsername.KeyPress
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            txtPassword.Focus()
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
+        If e.KeyChar = ChrW(Keys.Enter) Then
+            btnLogin_Click(Me, EventArgs.Empty)
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked = False Then
+
+            txtPassword.PasswordChar = "●"
+        Else
+            txtPassword.PasswordChar = ""
+        End If
     End Sub
 End Class

@@ -6,7 +6,7 @@ Imports System.Text
 Imports System.Web.UI.WebControls
 
 Public Class Chatbot
-    Dim OPENAI_API_KEY = "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"
+    Dim OPENAI_API_KEY = "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"
 
     Function callOpenAi(sQuestion As String, iMaxTokens As Integer, dTemperature As Double, sModel As String, top_p As Integer, frequency_penalty As Double, presence_penalty As Double)
         System.Net.ServicePointManager.SecurityProtocol =
@@ -25,6 +25,7 @@ Public Class Chatbot
         data += " ""prompt"": """ & cleanString(sQuestion) & ""","
         data += " ""max_tokens"": " & iMaxTokens & ","
         data += " ""temperature"": " & dTemperature & ", "
+        data += " ""top_p"": " & top_p & ", "
         data += " ""frequency_penalty"": " & frequency_penalty & ", "
         data += " ""presence_penalty"": " & presence_penalty & ", "
         data += " ""stop"": ["" Human:"", "" AI:""]"
@@ -62,7 +63,7 @@ Public Class Chatbot
 
     Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
         txtChat.Text = txtChat.Text + vbNewLine + "Human : " + txtQuestion.Text + vbNewLine + " AI : "
-        Dim response = callOpenAi(txtQuestion.Text, 500, 0.9, "text-davinci-003", 1, 0.0, 0.6)
+        Dim response = callOpenAi(txtQuestion.Text, 150, 0.9, "text-davinci-003", 1, 0.0, 0.6)
         For Each x In response
 
             txtChat.AppendText(x)

@@ -198,5 +198,14 @@
   <ItemGroup>
     <None Include="Resources\131321-green-and-black-polygon-background-graphic-design-vector-art.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-eye-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon eye chatbot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\username-icon-png-5 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

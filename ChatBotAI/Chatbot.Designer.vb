@@ -36,6 +36,7 @@ Partial Class Chatbot
         '
         'txtQuestion
         '
+        Me.txtQuestion.BorderColor = System.Drawing.Color.Transparent
         Me.txtQuestion.BorderRadius = 15
         Me.txtQuestion.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtQuestion.DefaultText = ""
@@ -77,23 +78,23 @@ Partial Class Chatbot
         Me.Guna2Panel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(138, 469)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(138, 470)
         Me.Guna2Panel1.TabIndex = 4
         '
         'Guna2HtmlLabel1
         '
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Russo One", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(12, 12)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(102, 27)
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(103, 27)
         Me.Guna2HtmlLabel1.TabIndex = 2
         Me.Guna2HtmlLabel1.Text = "CHATBOT"
         '
         'txtChat
         '
-        Me.txtChat.Font = New System.Drawing.Font("Roboto Condensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtChat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtChat.Location = New System.Drawing.Point(158, 22)
         Me.txtChat.Multiline = True
         Me.txtChat.Name = "txtChat"
@@ -102,6 +103,7 @@ Partial Class Chatbot
         '
         'txtNomer
         '
+        Me.txtNomer.BorderColor = System.Drawing.Color.Transparent
         Me.txtNomer.BorderRadius = 15
         Me.txtNomer.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtNomer.DefaultText = ""
@@ -142,7 +144,7 @@ Partial Class Chatbot
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(76, Byte), Integer), CType(CType(76, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(841, 469)
+        Me.ClientSize = New System.Drawing.Size(841, 470)
         Me.Controls.Add(Me.btnWa)
         Me.Controls.Add(Me.txtNomer)
         Me.Controls.Add(Me.txtChat)
