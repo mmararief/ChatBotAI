@@ -22,7 +22,17 @@ ChatBotAI
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:ChatBotAI.My.Resources.Resources._0090e9b8adf1a5fccf110625b6969a2f">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ChatBotAI.My.Resources.Resources._131321_green_and_black_polygon_background_graphic_design_vector_art">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources._29d49f5b4ca68f2634c61049838444aa">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -33,6 +43,11 @@ ChatBotAI
 </summary>
 </member>
 <member name="P:ChatBotAI.My.Resources.Resources.icon_eye_chatbot">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources.img_342905">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

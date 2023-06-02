@@ -63,9 +63,29 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _0090e9b8adf1a5fccf110625b6969a2f() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("0090e9b8adf1a5fccf110625b6969a2f", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property _131321_green_and_black_polygon_background_graphic_design_vector_art() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("131321-green-and-black-polygon-background-graphic-design-vector-art", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _29d49f5b4ca68f2634c61049838444aa() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("29d49f5b4ca68f2634c61049838444aa", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -86,6 +106,16 @@ Namespace My.Resources
         Friend ReadOnly Property icon_eye_chatbot() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("icon eye chatbot", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property img_342905() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("img_342905", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

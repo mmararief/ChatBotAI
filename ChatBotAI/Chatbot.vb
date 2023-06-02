@@ -6,7 +6,7 @@ Imports System.Text
 Imports System.Web.UI.WebControls
 
 Public Class Chatbot
-    Dim OPENAI_API_KEY = "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"
+    Dim OPENAI_API_KEY = "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"
 
     Function callOpenAi(sQuestion As String, iMaxTokens As Integer, dTemperature As Double, sModel As String, top_p As Integer, frequency_penalty As Double, presence_penalty As Double)
         System.Net.ServicePointManager.SecurityProtocol =
@@ -62,8 +62,8 @@ Public Class Chatbot
     End Function
 
     Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
-        txtChat.Text = txtChat.Text + vbNewLine + "Human : " + txtQuestion.Text + vbNewLine + " AI : "
-        Dim response = callOpenAi(txtQuestion.Text, 150, 0.9, "text-davinci-003", 1, 0.0, 0.6)
+        txtChat.Text = txtChat.Text + vbNewLine + vbNewLine + "Human : " + txtQuestion.Text + vbNewLine + " AI : "
+        Dim response = callOpenAi(txtQuestion.Text, 1500, 0.9, "text-davinci-003", 1, 0.0, 0.6)
         For Each x In response
 
             txtChat.AppendText(x)
@@ -73,28 +73,21 @@ Public Class Chatbot
 
     End Sub
 
-    Private Async Sub btnWa_Click(sender As Object, e As EventArgs) Handles btnWa.Click
-        Dim nomor As String = txtNomer.Text.Trim()
-        If nomor.StartsWith("0") Then
-            nomor = "62" & nomor.Substring(1)
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        End
+    End Sub
+
+    Private Sub txtQuestion_TextChanged(sender As Object, e As EventArgs) Handles txtQuestion.TextChanged
+        If txtQuestion.Text = "" Then
+            btnSend.FillColor = Color.FromArgb(172, 172, 190)
+        Else
+            btnSend.FillColor = Color.FromArgb(25, 195, 125)
         End If
-        Dim number As String = nomor & "@c.us" ' nomor telepon penerima
 
-        Dim pesan = txtChat.Text
-        Dim postData As String = "number=" & number & "&message=" & pesan
-        Using client As New HttpClient()
-            Dim content As New StringContent(postData, Encoding.UTF8, "application/x-www-form-urlencoded")
-            Try
-                client.DefaultRequestHeaders.Add("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImFtbWFyIn0sImlhdCI6MTY3ODk2MjQ0MH0.qyZaVNiT_FlMXIV9J2K8L7gOAWmqE-NbwxtjM81NE6k")
-                Dim response As HttpResponseMessage = Await client.PostAsync("https://api-wa-ammar.herokuapp.com/send-message", content)
-                response.EnsureSuccessStatusCode()
+    End Sub
 
-                'pesan berhasil terkirim
-                MessageBox.Show("Pesan berhasil terkirim ke nomor " & nomor & " dengan isi pesan: " & pesan)
-            Catch ex As HttpRequestException
-                'nomor tidak ditemukan
-                MessageBox.Show("Nomor tidak ditemukan.")
-            End Try
-        End Using
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+        txtQuestion.Text = ""
+
     End Sub
 End Class

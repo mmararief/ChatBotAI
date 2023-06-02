@@ -117,29 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PngItem_1298996" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PngItem_1298996.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="username-icon-png-5 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\username-icon-png-5 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="131321-green-and-black-polygon-background-graphic-design-vector-art" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\131321-green-and-black-polygon-background-graphic-design-vector-art.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon-eye-17" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-eye-17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="0090e9b8adf1a5fccf110625b6969a2f" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\0090e9b8adf1a5fccf110625b6969a2f.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon eye chatbot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon eye chatbot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img_342905" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img_342905.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="29d49f5b4ca68f2634c61049838444aa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\29d49f5b4ca68f2634c61049838444aa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
