@@ -226,5 +226,8 @@
   <ItemGroup>
     <None Include="Resources\29d49f5b4ca68f2634c61049838444aa.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whatsapp-logo-png.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

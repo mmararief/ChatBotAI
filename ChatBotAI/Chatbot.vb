@@ -6,7 +6,7 @@ Imports System.Text
 Imports System.Web.UI.WebControls
 
 Public Class Chatbot
-    Dim OPENAI_API_KEY = "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"
+    Dim OPENAI_API_KEY = "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"
 
     Function callOpenAi(sQuestion As String, iMaxTokens As Integer, dTemperature As Double, sModel As String, top_p As Integer, frequency_penalty As Double, presence_penalty As Double)
         System.Net.ServicePointManager.SecurityProtocol =
@@ -62,7 +62,7 @@ Public Class Chatbot
     End Function
 
     Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
-        txtChat.Text = txtChat.Text + vbNewLine + vbNewLine + "Human : " + txtQuestion.Text + vbNewLine + " AI : "
+        txtChat.Text = txtChat.Text + vbNewLine + vbNewLine + "    Human     :  " + txtQuestion.Text + vbNewLine + "    Dudu        :  "
         Dim response = callOpenAi(txtQuestion.Text, 1500, 0.9, "text-davinci-003", 1, 0.0, 0.6)
         For Each x In response
 
@@ -87,7 +87,7 @@ Public Class Chatbot
     End Sub
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
-        txtQuestion.Text = ""
+        txtChat.Text = ""
 
     End Sub
 End Class
