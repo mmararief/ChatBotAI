@@ -6,7 +6,7 @@ Imports System.Text
 Imports System.Web.UI.WebControls
 
 Public Class Chatbot
-    Dim OPENAI_API_KEY = "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"
+    Dim OPENAI_API_KEY = "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"
 
     Function callOpenAi(sQuestion As String, iMaxTokens As Integer, dTemperature As Double, sModel As String, top_p As Integer, frequency_penalty As Double, presence_penalty As Double)
         System.Net.ServicePointManager.SecurityProtocol =
@@ -38,13 +38,35 @@ Public Class Chatbot
             streamWriter.Close()
         End Using
 
-        Dim response As HttpWebResponse = request.GetResponse()
-        Dim streamReader As New StreamReader(response.GetResponseStream())
-        Dim sJson As String = streamReader.ReadToEnd()
-        'add reference System.Web.Extensions
-        Dim oJavaScriptSerializer As New System.Web.Script.Serialization.JavaScriptSerializer
-        Dim oJson As Hashtable = oJavaScriptSerializer.Deserialize(Of Hashtable)(sJson)
-        Dim sResponse As String = oJson("choices")(0)("text")
+        Dim response As HttpWebResponse = Nothing
+        Dim sResponse As String = ""
+
+        Try
+            response = request.GetResponse()
+            Dim streamReader As New StreamReader(response.GetResponseStream())
+            Dim sJson As String = streamReader.ReadToEnd()
+            'add reference System.Web.Extensions
+            Dim oJavaScriptSerializer As New System.Web.Script.Serialization.JavaScriptSerializer
+            Dim oJson As Hashtable = oJavaScriptSerializer.Deserialize(Of Hashtable)(sJson)
+            sResponse = oJson("choices")(0)("text")
+        Catch ex As WebException
+            Dim errorResponse As HttpWebResponse = DirectCast(ex.Response, HttpWebResponse)
+            If errorResponse.StatusCode = HttpStatusCode.BadRequest Then
+                ' Menghandle respon dengan kode status 400 Bad Request
+                sResponse = "Terjadi kesalahan dalam permintaan."
+            Else
+                ' Menghandle respon dengan kode status lain
+                sResponse = "Terjadi kesalahan dalam komunikasi dengan Api."
+            End If
+        Catch ex As Exception
+            ' Menghandle exception umum
+            sResponse = "Terjadi kesalahan dalam pemrosesan."
+        Finally
+            If response IsNot Nothing Then
+                response.Close()
+            End If
+        End Try
+
         Return sResponse
 
     End Function
@@ -83,11 +105,29 @@ Public Class Chatbot
         Else
             btnSend.FillColor = Color.FromArgb(25, 195, 125)
         End If
-
     End Sub
-
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
         txtChat.Text = ""
 
+    End Sub
+
+    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton2.Click
+        pnlContent.Visible = True
+        With ImageGeneration
+            .TopLevel = False
+            pnlContent.Controls.Add(ImageGeneration)
+            .BringToFront()
+            .Show()
+        End With
+        Guna2GradientButton3.Visible = True
+        Guna2GradientButton2.Visible = False
+        Guna2GradientButton1.Visible = False
+    End Sub
+
+    Private Sub Guna2GradientButton3_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton3.Click
+        pnlContent.Visible = False
+        Guna2GradientButton2.Visible = True
+        Guna2GradientButton3.Visible = False
+        Guna2GradientButton1.Visible = True
     End Sub
 End Class

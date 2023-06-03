@@ -161,3 +161,4 @@ C:\Users\arief\Downloads\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.exe
 C:\Users\arief\Downloads\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.xml
 C:\Users\arief\Downloads\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.pdb
 C:\Users\arief\Downloads\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.Form2.resources
+C:\Users\arief\Downloads\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.ImageGeneration.resources
