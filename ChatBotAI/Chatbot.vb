@@ -8,7 +8,7 @@ Imports Newtonsoft.Json.Linq
 
 Public Class Chatbot
     Private Async Function callOpenAi(sQuestion As String) As Task(Of String)
-        Dim apiKey As String = "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"
+        Dim apiKey As String = "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"
         Dim apiUrl As String = "https://api.openai.com/v1/chat/completions"
         Dim responseContent As String = ""
 

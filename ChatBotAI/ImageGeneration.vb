@@ -5,7 +5,7 @@ Imports System.Web.UI.WebControls
 
 Public Class ImageGeneration
     Private Async Sub btnGenerateImage_Click(sender As Object, e As EventArgs) Handles btnGenerateImage.Click
-        Dim apiKey As String = "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"
+        Dim apiKey As String = "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"
         Dim apiUrl As String = "https://api.openai.com/v1/images/generations"
         Dim prompt As String = txtImage.Text
         Dim numImages As Integer = 1
