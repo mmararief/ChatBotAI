@@ -4,71 +4,41 @@ Imports System.Net.Http
 Imports System.Text
 
 Imports System.Web.UI.WebControls
+Imports Newtonsoft.Json.Linq
 
 Public Class Chatbot
-    Dim OPENAI_API_KEY = "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"
+    Private Async Function callOpenAi(sQuestion As String) As Task(Of String)
+        Dim apiKey As String = "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"
+        Dim apiUrl As String = "https://api.openai.com/v1/chat/completions"
+        Dim responseContent As String = ""
 
-    Function callOpenAi(sQuestion As String, iMaxTokens As Integer, dTemperature As Double, sModel As String, top_p As Integer, frequency_penalty As Double, presence_penalty As Double)
-        System.Net.ServicePointManager.SecurityProtocol =
-        System.Net.SecurityProtocolType.Ssl3 Or
-        System.Net.SecurityProtocolType.Tls12 Or
-        System.Net.SecurityProtocolType.Tls11 Or
-        System.Net.SecurityProtocolType.Tls
-        Dim apiEndpoint As String = "https://api.openai.com/v1/completions"
-        Dim request As HttpWebRequest = WebRequest.Create(apiEndpoint)
-        request.Method = "POST"
-        request.ContentType = "application/json"
-        request.Headers.Add("Authorization", "Bearer " & OPENAI_API_KEY)
+        ' Membuat HttpClient
+        Dim httpClient As New HttpClient()
+        httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " & apiKey)
 
-        Dim data As String = "{"
-        data += " ""model"":""" & sModel & ""","
-        data += " ""prompt"": """ & cleanString(sQuestion) & ""","
-        data += " ""max_tokens"": " & iMaxTokens & ","
-        data += " ""temperature"": " & dTemperature & ", "
-        data += " ""top_p"": " & top_p & ", "
-        data += " ""frequency_penalty"": " & frequency_penalty & ", "
-        data += " ""presence_penalty"": " & presence_penalty & ", "
-        data += " ""stop"": ["" Human:"", "" AI:""]"
-        data += "}"
-
-
-        Using streamWriter As New StreamWriter(request.GetRequestStream())
-            streamWriter.Write(data)
-            streamWriter.Flush()
-            streamWriter.Close()
-        End Using
-
-        Dim response As HttpWebResponse = Nothing
-        Dim sResponse As String = ""
+        ' Membuat body JSON
+        Dim body As String = $"{{""model"": ""gpt-3.5-turbo"", ""messages"": [{{""role"": ""user"", ""content"": ""{cleanString(sQuestion)}""}}]}}"
+        Dim content As New StringContent(body, Encoding.UTF8, "application/json")
 
         Try
-            response = request.GetResponse()
-            Dim streamReader As New StreamReader(response.GetResponseStream())
-            Dim sJson As String = streamReader.ReadToEnd()
-            'add reference System.Web.Extensions
-            Dim oJavaScriptSerializer As New System.Web.Script.Serialization.JavaScriptSerializer
-            Dim oJson As Hashtable = oJavaScriptSerializer.Deserialize(Of Hashtable)(sJson)
-            sResponse = oJson("choices")(0)("text")
-        Catch ex As WebException
-            Dim errorResponse As HttpWebResponse = DirectCast(ex.Response, HttpWebResponse)
-            If errorResponse.StatusCode = HttpStatusCode.BadRequest Then
-                ' Menghandle respon dengan kode status 400 Bad Request
-                sResponse = "Terjadi kesalahan dalam permintaan."
-            Else
-                ' Menghandle respon dengan kode status lain
-                sResponse = "Terjadi kesalahan dalam komunikasi dengan Api."
+            ' Mengirim permintaan HTTP secara asynchronous
+            Dim response As HttpResponseMessage = Await httpClient.PostAsync(apiUrl, content)
+
+            ' Menerima dan membaca respons
+            Dim jsonResponse As String = Await response.Content.ReadAsStringAsync()
+
+            ' Mendapatkan isi konten dari respons JSON
+            Dim data As JObject = JObject.Parse(jsonResponse)
+            Dim contentObject As JToken = data.SelectToken("choices[0].message.content")
+            If contentObject IsNot Nothing Then
+                responseContent = contentObject.ToString()
             End If
         Catch ex As Exception
-            ' Menghandle exception umum
-            sResponse = "Terjadi kesalahan dalam pemrosesan."
-        Finally
-            If response IsNot Nothing Then
-                response.Close()
-            End If
+            ' Tangani jika terjadi kesalahan saat melakukan permintaan
+            MessageBox.Show(ex.Message, "Error")
         End Try
 
-        Return sResponse
-
+        Return responseContent
     End Function
     Private Function cleanString(ByVal s As String) As String
         If s.IndexOf("\") <> -1 Then s = Replace(s, "\", "\\")
@@ -82,18 +52,39 @@ Public Class Chatbot
             Return Replace(s, """", "\""")
         End If
     End Function
+    Private Async Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
+        Dim humanMessage As String = "    Human     : " & txtQuestion.Text
 
-    Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
-        txtChat.Text = txtChat.Text + vbNewLine + vbNewLine + "    Human     :  " + txtQuestion.Text + vbNewLine + "    Dudu        :  "
-        Dim response = callOpenAi(txtQuestion.Text, 1500, 0.9, "text-davinci-003", 1, 0.0, 0.6)
-        For Each x In response
+        ' Menambahkan pesan manusia
+        txtChat.SelectionFont = New Font(txtChat.Font, FontStyle.Bold)
+        txtChat.AppendText(vbCrLf & vbCrLf & humanMessage)
 
-            txtChat.AppendText(x)
-        Next
+        Dim response As String = Await callOpenAi(txtQuestion.Text)
+
+        ' Menambahkan pesan Dudu dan respons hanya jika respons diterima
+        If Not String.IsNullOrEmpty(response) Then
+            Dim duduMessage As String = "    Dudu        : "
+            Dim formattedResponse As String = response.Replace(vbCrLf, " ")
+
+            ' Menambahkan pesan Dudu
+            txtChat.SelectionFont = New Font(txtChat.Font, FontStyle.Regular)
+            txtChat.AppendText(vbCrLf & duduMessage & formattedResponse)
+        End If
+
+        ' Mengatur scroll ke paling bawah
+        txtChat.SelectionStart = txtChat.TextLength
+        txtChat.ScrollToCaret()
 
         txtQuestion.Text = ""
-
     End Sub
+
+    Private Sub txtQuestion_KeyDown(sender As Object, e As KeyEventArgs) Handles txtQuestion.KeyDown
+        If txtQuestion.Text IsNot "" AndAlso e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True ' Mengabaikan suara "beep" saat menekan tombol Enter
+            btnSend_Click(Me, EventArgs.Empty)
+        End If
+    End Sub
+
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         End
@@ -102,9 +93,12 @@ Public Class Chatbot
     Private Sub txtQuestion_TextChanged(sender As Object, e As EventArgs) Handles txtQuestion.TextChanged
         If txtQuestion.Text = "" Then
             btnSend.FillColor = Color.FromArgb(172, 172, 190)
+            btnSend.Enabled = False
         Else
             btnSend.FillColor = Color.FromArgb(25, 195, 125)
+            btnSend.Enabled = True
         End If
+
     End Sub
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
         txtChat.Text = ""
@@ -129,5 +123,9 @@ Public Class Chatbot
         Guna2GradientButton2.Visible = True
         Guna2GradientButton3.Visible = False
         Guna2GradientButton1.Visible = True
+    End Sub
+
+    Private Sub pnlContent_Paint(sender As Object, e As PaintEventArgs) Handles pnlContent.Paint
+
     End Sub
 End Class

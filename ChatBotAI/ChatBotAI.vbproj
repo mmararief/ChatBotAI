@@ -238,5 +238,8 @@
   <ItemGroup>
     <None Include="Resources\whatsapp-logo-png.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cognti.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

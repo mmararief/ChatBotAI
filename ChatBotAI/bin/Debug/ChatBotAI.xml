@@ -37,6 +37,11 @@ ChatBotAI
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ChatBotAI.My.Resources.Resources.cognti">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ChatBotAI.My.Resources.Resources.icon_eye_17">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
