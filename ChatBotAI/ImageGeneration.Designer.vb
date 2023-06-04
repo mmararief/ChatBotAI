@@ -22,64 +22,28 @@ Partial Class ImageGeneration
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.components = New System.ComponentModel.Container()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.btnGenerateImage = New Guna.UI2.WinForms.Guna2Button()
         Me.txtImage = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnSaveImage = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnPnlWa = New Guna.UI2.WinForms.Guna2Button()
-        Me.pnlWa = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnWa = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2CircleButton1 = New Guna.UI2.WinForms.Guna2CircleButton()
-        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.txtNomer = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnGenerateImage = New Guna.UI2.WinForms.Guna2Button()
+        Me.PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlWa.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.FillColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.ImageRotate = 0!
-        Me.PictureBox1.Location = New System.Drawing.Point(320, 44)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(416, 307)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'Guna2HtmlLabel1
         '
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Roboto Mono", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.White
         Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(67, 44)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(211, 30)
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(189, 27)
         Me.Guna2HtmlLabel1.TabIndex = 1
         Me.Guna2HtmlLabel1.Text = "Image Generation"
-        '
-        'btnGenerateImage
-        '
-        Me.btnGenerateImage.BackColor = System.Drawing.Color.Transparent
-        Me.btnGenerateImage.BorderRadius = 15
-        Me.btnGenerateImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnGenerateImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnGenerateImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnGenerateImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnGenerateImage.FillColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.btnGenerateImage.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnGenerateImage.ForeColor = System.Drawing.Color.White
-        Me.btnGenerateImage.Image = Global.ChatBotAI.My.Resources.Resources._0090e9b8adf1a5fccf110625b6969a2f
-        Me.btnGenerateImage.Location = New System.Drawing.Point(699, 405)
-        Me.btnGenerateImage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnGenerateImage.Name = "btnGenerateImage"
-        Me.btnGenerateImage.Size = New System.Drawing.Size(36, 38)
-        Me.btnGenerateImage.TabIndex = 8
-        Me.btnGenerateImage.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.btnGenerateImage.UseTransparentBackground = True
         '
         'txtImage
         '
@@ -163,94 +127,42 @@ Partial Class ImageGeneration
         Me.btnPnlWa.TabIndex = 11
         Me.btnPnlWa.Text = "Share"
         '
-        'pnlWa
+        'Timer1
         '
-        Me.pnlWa.BackColor = System.Drawing.Color.White
-        Me.pnlWa.BorderRadius = 10
-        Me.pnlWa.Controls.Add(Me.btnWa)
-        Me.pnlWa.Controls.Add(Me.Guna2CircleButton1)
-        Me.pnlWa.Controls.Add(Me.Guna2HtmlLabel2)
-        Me.pnlWa.Controls.Add(Me.txtNomer)
-        Me.pnlWa.Location = New System.Drawing.Point(184, 147)
-        Me.pnlWa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.pnlWa.Name = "pnlWa"
-        Me.pnlWa.Size = New System.Drawing.Size(450, 144)
-        Me.pnlWa.TabIndex = 12
-        Me.pnlWa.Visible = False
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 8
         '
-        'btnWa
+        'btnGenerateImage
         '
-        Me.btnWa.BackColor = System.Drawing.Color.Transparent
-        Me.btnWa.BorderRadius = 5
-        Me.btnWa.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnWa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnWa.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnWa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnWa.FillColor = System.Drawing.Color.Green
-        Me.btnWa.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnWa.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnWa.Image = Global.ChatBotAI.My.Resources.Resources._0090e9b8adf1a5fccf110625b6969a2f
-        Me.btnWa.Location = New System.Drawing.Point(398, 83)
-        Me.btnWa.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnWa.Name = "btnWa"
-        Me.btnWa.Size = New System.Drawing.Size(36, 31)
-        Me.btnWa.TabIndex = 13
-        Me.btnWa.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.btnWa.UseTransparentBackground = True
+        Me.btnGenerateImage.BackColor = System.Drawing.Color.Transparent
+        Me.btnGenerateImage.BorderRadius = 15
+        Me.btnGenerateImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnGenerateImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnGenerateImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnGenerateImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnGenerateImage.FillColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(190, Byte), Integer))
+        Me.btnGenerateImage.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnGenerateImage.ForeColor = System.Drawing.Color.White
+        Me.btnGenerateImage.Image = Global.ChatBotAI.My.Resources.Resources._0090e9b8adf1a5fccf110625b6969a2f
+        Me.btnGenerateImage.Location = New System.Drawing.Point(699, 405)
+        Me.btnGenerateImage.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnGenerateImage.Name = "btnGenerateImage"
+        Me.btnGenerateImage.Size = New System.Drawing.Size(36, 38)
+        Me.btnGenerateImage.TabIndex = 8
+        Me.btnGenerateImage.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.btnGenerateImage.UseTransparentBackground = True
         '
-        'Guna2CircleButton1
+        'PictureBox1
         '
-        Me.Guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2CircleButton1.FillColor = System.Drawing.Color.Red
-        Me.Guna2CircleButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2CircleButton1.ForeColor = System.Drawing.Color.White
-        Me.Guna2CircleButton1.Location = New System.Drawing.Point(415, 16)
-        Me.Guna2CircleButton1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Guna2CircleButton1.Name = "Guna2CircleButton1"
-        Me.Guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2CircleButton1.Size = New System.Drawing.Size(19, 18)
-        Me.Guna2CircleButton1.TabIndex = 14
-        Me.Guna2CircleButton1.Text = "Guna2CircleButton1"
-        '
-        'Guna2HtmlLabel2
-        '
-        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Roboto Mono", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(20, 31)
-        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(250, 30)
-        Me.Guna2HtmlLabel2.TabIndex = 13
-        Me.Guna2HtmlLabel2.Text = "Bagikan Ke Whatsapp"
-        '
-        'txtNomer
-        '
-        Me.txtNomer.BorderColor = System.Drawing.Color.Transparent
-        Me.txtNomer.BorderRadius = 15
-        Me.txtNomer.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtNomer.DefaultText = ""
-        Me.txtNomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtNomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtNomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtNomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtNomer.FillColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.txtNomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNomer.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtNomer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtNomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNomer.Location = New System.Drawing.Point(20, 83)
-        Me.txtNomer.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.txtNomer.Name = "txtNomer"
-        Me.txtNomer.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtNomer.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtNomer.PlaceholderText = "Masukan Nomer Whatsapp"
-        Me.txtNomer.SelectedText = ""
-        Me.txtNomer.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(15)
-        Me.txtNomer.Size = New System.Drawing.Size(371, 31)
-        Me.txtNomer.TabIndex = 8
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.FillColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.ImageRotate = 0!
+        Me.PictureBox1.Location = New System.Drawing.Point(320, 44)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(416, 307)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'ImageGeneration
         '
@@ -258,7 +170,6 @@ Partial Class ImageGeneration
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(791, 468)
-        Me.Controls.Add(Me.pnlWa)
         Me.Controls.Add(Me.btnPnlWa)
         Me.Controls.Add(Me.Guna2TextBox1)
         Me.Controls.Add(Me.btnGenerateImage)
@@ -272,8 +183,6 @@ Partial Class ImageGeneration
         Me.Text = "ImageGeneration"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlWa.ResumeLayout(False)
-        Me.pnlWa.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -286,9 +195,5 @@ Partial Class ImageGeneration
     Friend WithEvents btnSaveImage As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnPnlWa As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents pnlWa As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents txtNomer As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2CircleButton1 As Guna.UI2.WinForms.Guna2CircleButton
-    Friend WithEvents btnWa As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Timer1 As Timer
 End Class

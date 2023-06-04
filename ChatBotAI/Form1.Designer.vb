@@ -147,7 +147,7 @@ Partial Class Form1
         Me.Guna2Panel1.Location = New System.Drawing.Point(177, 53)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2Panel1.Size = New System.Drawing.Size(383, 343)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(383, 357)
         Me.Guna2Panel1.TabIndex = 0
         Me.Guna2Panel1.UseTransparentBackground = True
         '
