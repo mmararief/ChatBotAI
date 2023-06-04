@@ -1,9 +1,12 @@
 ﻿Imports Newtonsoft.Json.Linq
+Imports System.IO
 Imports System.Net.Http
+Imports System.Net.Http.Headers
 Imports System.Text
 Imports System.Web.UI.WebControls
 
 Public Class ImageGeneration
+    Dim image As String
     Private Async Sub btnGenerateImage_Click(sender As Object, e As EventArgs) Handles btnGenerateImage.Click
         Dim apiKey As String = "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"
         Dim apiUrl As String = "https://api.openai.com/v1/images/generations"
@@ -28,6 +31,8 @@ Public Class ImageGeneration
 
             ' Mendapatkan URL gambar dari respons JSON
             Dim imageUrl As String = GetImageUrlFromJson(jsonResponse)
+
+            image = imageUrl
 
             ' Menampilkan gambar di PictureBox
             PictureBox1.Load(imageUrl)
@@ -59,10 +64,6 @@ Public Class ImageGeneration
 
     End Sub
 
-    Private Sub Guna2TextBox1_TextChanged(sender As Object, e As EventArgs) Handles Guna2TextBox1.TextChanged
-
-    End Sub
-
     Private Sub btnSaveImage_Click(sender As Object, e As EventArgs) Handles btnSaveImage.Click
         If PictureBox1.Image IsNot Nothing Then
             Using saveDialog As New SaveFileDialog()
@@ -77,4 +78,44 @@ Public Class ImageGeneration
             MessageBox.Show("No image to save.", "Error")
         End If
     End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnPnlWa.Click
+        pnlWa.Visible = True
+    End Sub
+
+
+    Private Sub Guna2CircleButton1_Click(sender As Object, e As EventArgs) Handles Guna2CircleButton1.Click
+        pnlWa.Hide()
+    End Sub
+
+    Private Async Sub btnWa_Click(sender As Object, e As EventArgs) Handles btnWa.Click
+        Dim nomor As String = txtNomer.Text.Trim()
+        If nomor.StartsWith("0") Then
+            nomor = "62" & nomor.Substring(1)
+        End If
+        Dim number As String = nomor & "@c.us" ' nomor telepon penerima
+
+        Dim caption = txtImage.Text
+        Dim file = image
+
+        Using client As New HttpClient()
+            Using content As New MultipartFormDataContent()
+                content.Add(New StringContent(file), "file")
+                content.Add(New StringContent(number), "number")
+                content.Add(New StringContent(caption), "caption")
+
+                Try
+                    Dim response As HttpResponseMessage = Await client.PostAsync("https://ammar-wa.herokuapp.com/send-media", content)
+                    response.EnsureSuccessStatusCode()
+
+                    ' pesan berhasil terkirim
+                    MessageBox.Show("Gambar berhasil terkirim ke nomor " & nomor)
+                Catch ex As HttpRequestException
+                    ' nomor tidak ditemukan
+                    MessageBox.Show("Nomor tidak ditemukan." & image)
+                End Try
+            End Using
+        End Using
+    End Sub
+
 End Class

@@ -113,16 +113,16 @@ Public Class Chatbot
             .BringToFront()
             .Show()
         End With
-        Guna2GradientButton3.Visible = True
-        Guna2GradientButton2.Visible = False
-        Guna2GradientButton1.Visible = False
+        Guna2GradientButton2.FillColor = Color.MidnightBlue
+        Guna2GradientButton3.FillColor = Color.FromArgb(64, 64, 64)
+
     End Sub
 
     Private Sub Guna2GradientButton3_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton3.Click
         pnlContent.Visible = False
-        Guna2GradientButton2.Visible = True
-        Guna2GradientButton3.Visible = False
-        Guna2GradientButton1.Visible = True
+        Guna2GradientButton2.FillColor = Color.FromArgb(64, 64, 64)
+        Guna2GradientButton3.FillColor = Color.FromArgb(49, 195, 162)
+
     End Sub
 
     Private Sub pnlContent_Paint(sender As Object, e As PaintEventArgs) Handles pnlContent.Paint
