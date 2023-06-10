@@ -35,6 +35,7 @@ Partial Class Form1
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,6 +134,7 @@ Partial Class Form1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel1.BorderRadius = 20
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel5)
         Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel4)
         Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel3)
         Me.Guna2Panel1.Controls.Add(Me.Guna2PictureBox2)
@@ -217,6 +219,16 @@ Partial Class Form1
         Me.Guna2PictureBox1.TabIndex = 1
         Me.Guna2PictureBox1.TabStop = False
         '
+        'Guna2HtmlLabel5
+        '
+        Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(289, 326)
+        Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
+        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(67, 15)
+        Me.Guna2HtmlLabel5.TabIndex = 10
+        Me.Guna2HtmlLabel5.Text = "Register Now"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -248,4 +260,5 @@ Partial Class Form1
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

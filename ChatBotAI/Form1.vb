@@ -71,4 +71,10 @@ Public Class Form1
     Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
 
     End Sub
+
+    Private Sub Guna2HtmlLabel5_Click(sender As Object, e As EventArgs) Handles Guna2HtmlLabel5.Click
+        Me.Hide()
+        Dim register As New Register()
+        register.Show()
+    End Sub
 End Class
