@@ -30,6 +30,7 @@ Partial Class Form3
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Guna2DragControl2 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.SuspendLayout()
         '
         'txtNomer
@@ -82,7 +83,7 @@ Partial Class Form3
         Me.Guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black
         Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(20, 31)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(235, 27)
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(340, 39)
         Me.Guna2HtmlLabel2.TabIndex = 13
         Me.Guna2HtmlLabel2.Text = "Bagikan Ke Whatsapp"
         '
@@ -113,7 +114,7 @@ Partial Class Form3
         Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black
         Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(24, 52)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(235, 27)
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(340, 39)
         Me.Guna2HtmlLabel1.TabIndex = 14
         Me.Guna2HtmlLabel1.Text = "Bagikan Ke Whatsapp"
         '
@@ -126,6 +127,12 @@ Partial Class Form3
         '
         Me.Guna2Elipse1.BorderRadius = 30
         Me.Guna2Elipse1.TargetControl = Me
+        '
+        'Guna2DragControl2
+        '
+        Me.Guna2DragControl2.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2DragControl2.TargetControl = Me
+        Me.Guna2DragControl2.UseTransparentDrag = True
         '
         'Form3
         '
@@ -152,4 +159,5 @@ Partial Class Form3
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents Guna2DragControl2 As Guna.UI2.WinForms.Guna2DragControl
 End Class
