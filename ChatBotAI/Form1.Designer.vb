@@ -30,12 +30,12 @@ Partial Class Form1
         Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnLogin = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -116,7 +116,8 @@ Partial Class Form1
         '
         'btnLogin
         '
-        Me.btnLogin.BorderRadius = 15
+        Me.btnLogin.AutoRoundedCorners = True
+        Me.btnLogin.BorderRadius = 22
         Me.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -152,6 +153,17 @@ Partial Class Form1
         Me.Guna2Panel1.Size = New System.Drawing.Size(383, 357)
         Me.Guna2Panel1.TabIndex = 0
         Me.Guna2Panel1.UseTransparentBackground = True
+        '
+        'Guna2HtmlLabel5
+        '
+        Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Segoe UI Variable Display", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(305, 323)
+        Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
+        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(51, 18)
+        Me.Guna2HtmlLabel5.TabIndex = 10
+        Me.Guna2HtmlLabel5.Text = "Register "
         '
         'Guna2HtmlLabel4
         '
@@ -218,16 +230,6 @@ Partial Class Form1
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.Guna2PictureBox1.TabIndex = 1
         Me.Guna2PictureBox1.TabStop = False
-        '
-        'Guna2HtmlLabel5
-        '
-        Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(289, 326)
-        Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(67, 15)
-        Me.Guna2HtmlLabel5.TabIndex = 10
-        Me.Guna2HtmlLabel5.Text = "Register Now"
         '
         'Form1
         '

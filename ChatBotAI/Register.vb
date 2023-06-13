@@ -40,6 +40,7 @@ Public Class Register
             Me.Hide()
             Dim login As New Form1()
             login.Show()
+            login.Show()
 
 
         End If

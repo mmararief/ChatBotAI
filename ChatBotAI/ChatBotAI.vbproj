@@ -338,6 +338,12 @@
     <Compile Include="Register.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RegisterNew.Designer.vb">
+      <DependentUpon>RegisterNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Chatbot.resx">
@@ -363,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterNew.resx">
+      <DependentUpon>RegisterNew.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -407,6 +416,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cognti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PngItem_12989961.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon chatbot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WHITE ICON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WHITE ICON1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WHITE ICON 33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newww.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baru lagi nih.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

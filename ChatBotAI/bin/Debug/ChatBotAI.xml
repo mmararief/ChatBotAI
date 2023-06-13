@@ -22,6 +22,11 @@ ChatBotAI
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:ChatBotAI.My.Resources.Resources._00">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ChatBotAI.My.Resources.Resources._0090e9b8adf1a5fccf110625b6969a2f">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -37,7 +42,22 @@ ChatBotAI
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ChatBotAI.My.Resources.Resources.baru">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources.baru_lagi_nih">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ChatBotAI.My.Resources.Resources.cognti">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources.icon_chatbot">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -57,7 +77,17 @@ ChatBotAI
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ChatBotAI.My.Resources.Resources.newww">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ChatBotAI.My.Resources.Resources.PngItem_1298996">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources.PngItem_12989961">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -68,6 +98,21 @@ ChatBotAI
 </summary>
 </member>
 <member name="P:ChatBotAI.My.Resources.Resources.whatsapp_logo_png">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources.WHITE_ICON">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources.WHITE_ICON_33">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources.WHITE_ICON1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
