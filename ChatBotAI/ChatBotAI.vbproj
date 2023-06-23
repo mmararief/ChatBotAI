@@ -282,6 +282,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="about.Designer.vb">
+      <DependentUpon>about.vb</DependentUpon>
+    </Compile>
+    <Compile Include="about.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Chatbot.Designer.vb">
       <DependentUpon>Chatbot.vb</DependentUpon>
     </Compile>
@@ -303,12 +309,6 @@
       <DependentUpon>Form3.vb</DependentUpon>
     </Compile>
     <Compile Include="Form3.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formwa.Designer.vb">
-      <DependentUpon>formwa.vb</DependentUpon>
-    </Compile>
-    <Compile Include="formwa.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ImageGeneration.Designer.vb">
@@ -346,6 +346,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="about.resx">
+      <DependentUpon>about.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Chatbot.resx">
       <DependentUpon>Chatbot.vb</DependentUpon>
     </EmbeddedResource>
@@ -443,6 +446,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon eye jpg 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12291073_Wavy_Tech-21_Single-06.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12291073_Wavy_Tech-21_Single-061.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12291073_Wavy_Tech-21_Single-062.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refershing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refreshing2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

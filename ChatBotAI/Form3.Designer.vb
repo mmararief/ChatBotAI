@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form3
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,17 @@ Partial Class Form3
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.txtNomer = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2CircleButton1 = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.btnWa = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2DragControl2 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.btnWa = New Guna.UI2.WinForms.Guna2Button()
         Me.SuspendLayout()
         '
         'txtNomer
@@ -83,9 +83,36 @@ Partial Class Form3
         Me.Guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black
         Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(20, 31)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(340, 39)
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(235, 27)
         Me.Guna2HtmlLabel2.TabIndex = 13
         Me.Guna2HtmlLabel2.Text = "Bagikan Ke Whatsapp"
+        '
+        'Guna2HtmlLabel1
+        '
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(24, 52)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(235, 27)
+        Me.Guna2HtmlLabel1.TabIndex = 14
+        Me.Guna2HtmlLabel1.Text = "Bagikan Ke Whatsapp"
+        '
+        'Guna2DragControl1
+        '
+        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2DragControl1.UseTransparentDrag = True
+        '
+        'Guna2Elipse1
+        '
+        Me.Guna2Elipse1.BorderRadius = 30
+        Me.Guna2Elipse1.TargetControl = Me
+        '
+        'Guna2DragControl2
+        '
+        Me.Guna2DragControl2.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2DragControl2.TargetControl = Me
+        Me.Guna2DragControl2.UseTransparentDrag = True
         '
         'btnWa
         '
@@ -106,33 +133,6 @@ Partial Class Form3
         Me.btnWa.TabIndex = 13
         Me.btnWa.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.btnWa.UseTransparentBackground = True
-        '
-        'Guna2HtmlLabel1
-        '
-        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(24, 52)
-        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(340, 39)
-        Me.Guna2HtmlLabel1.TabIndex = 14
-        Me.Guna2HtmlLabel1.Text = "Bagikan Ke Whatsapp"
-        '
-        'Guna2DragControl1
-        '
-        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
-        Me.Guna2DragControl1.UseTransparentDrag = True
-        '
-        'Guna2Elipse1
-        '
-        Me.Guna2Elipse1.BorderRadius = 30
-        Me.Guna2Elipse1.TargetControl = Me
-        '
-        'Guna2DragControl2
-        '
-        Me.Guna2DragControl2.DockIndicatorTransparencyValue = 0.6R
-        Me.Guna2DragControl2.TargetControl = Me
-        Me.Guna2DragControl2.UseTransparentDrag = True
         '
         'Form3
         '

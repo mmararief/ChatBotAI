@@ -128,4 +128,14 @@ Public Class Chatbot
     Private Sub pnlContent_Paint(sender As Object, e As PaintEventArgs) Handles pnlContent.Paint
 
     End Sub
+
+    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
+        pnlContent.Visible = True
+        With about
+            .TopLevel = False
+            pnlContent.Controls.Add(about)
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
 End Class

@@ -27,7 +27,27 @@ ChatBotAI
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ChatBotAI.My.Resources.Resources._001">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ChatBotAI.My.Resources.Resources._0090e9b8adf1a5fccf110625b6969a2f">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources._12291073_Wavy_Tech_21_Single_06">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources._12291073_Wavy_Tech_21_Single_061">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources._12291073_Wavy_Tech_21_Single_062">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -72,6 +92,11 @@ ChatBotAI
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ChatBotAI.My.Resources.Resources.icon_eye_jpg_2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ChatBotAI.My.Resources.Resources.img_342905">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -88,6 +113,36 @@ ChatBotAI
 </summary>
 </member>
 <member name="P:ChatBotAI.My.Resources.Resources.PngItem_12989961">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources.refershing">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources.refreshing2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources.robot">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources.robot1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources.robot2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ChatBotAI.My.Resources.Resources.robot3">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

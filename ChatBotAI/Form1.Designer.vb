@@ -192,11 +192,12 @@ Partial Class Form1
         '
         Me.CheckBox2.Appearance = System.Windows.Forms.Appearance.Button
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.BackColor = System.Drawing.Color.Transparent
+        Me.CheckBox2.BackColor = System.Drawing.Color.Black
         Me.CheckBox2.BackgroundImage = Global.ChatBotAI.My.Resources.Resources.username_icon_png_5__1_
         Me.CheckBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.CheckBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox2.ForeColor = System.Drawing.Color.Black
         Me.CheckBox2.Location = New System.Drawing.Point(289, 131)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(26, 25)
@@ -208,11 +209,13 @@ Partial Class Form1
         '
         Me.CheckBox1.Appearance = System.Windows.Forms.Appearance.Button
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
+        Me.CheckBox1.BackColor = System.Drawing.Color.Black
         Me.CheckBox1.BackgroundImage = Global.ChatBotAI.My.Resources.Resources.icon_eye_chatbot
         Me.CheckBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.CheckBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.CheckBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.ForeColor = System.Drawing.Color.Black
         Me.CheckBox1.Location = New System.Drawing.Point(286, 206)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(31, 30)
@@ -224,9 +227,9 @@ Partial Class Form1
         '
         Me.Guna2PictureBox1.Image = Global.ChatBotAI.My.Resources.Resources._131321_green_and_black_polygon_background_graphic_design_vector_art
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-1, -11)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-2, -4)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(764, 464)
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(785, 464)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.Guna2PictureBox1.TabIndex = 1
         Me.Guna2PictureBox1.TabStop = False
@@ -239,7 +242,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.Guna2PictureBox1)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "Login"

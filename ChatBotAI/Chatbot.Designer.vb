@@ -26,6 +26,7 @@ Partial Class Chatbot
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Chatbot))
         Me.txtQuestion = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2GradientButton1 = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
@@ -74,6 +75,7 @@ Partial Class Chatbot
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.Guna2Panel1.Controls.Add(Me.Guna2GradientButton1)
         Me.Guna2Panel1.Controls.Add(Me.Guna2GradientButton3)
         Me.Guna2Panel1.Controls.Add(Me.Guna2GradientButton2)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Button1)
@@ -86,6 +88,25 @@ Partial Class Chatbot
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(197, 470)
         Me.Guna2Panel1.TabIndex = 4
+        '
+        'Guna2GradientButton1
+        '
+        Me.Guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Guna2GradientButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2GradientButton1.ForeColor = System.Drawing.Color.White
+        Me.Guna2GradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.Guna2GradientButton1.ImageOffset = New System.Drawing.Point(12, 0)
+        Me.Guna2GradientButton1.Location = New System.Drawing.Point(-2, 228)
+        Me.Guna2GradientButton1.Name = "Guna2GradientButton1"
+        Me.Guna2GradientButton1.Size = New System.Drawing.Size(196, 54)
+        Me.Guna2GradientButton1.TabIndex = 17
+        Me.Guna2GradientButton1.Text = "About"
         '
         'Guna2HtmlLabel4
         '
@@ -121,19 +142,20 @@ Partial Class Chatbot
         'Guna2HtmlLabel1
         '
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(281, 4)
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.White
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(281, 1)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(87, 15)
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(123, 20)
         Me.Guna2HtmlLabel1.TabIndex = 0
         Me.Guna2HtmlLabel1.Text = "Start your chat"
         '
         'pnlContent
         '
-        Me.pnlContent.Location = New System.Drawing.Point(199, 2)
+        Me.pnlContent.Location = New System.Drawing.Point(187, 0)
         Me.pnlContent.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlContent.Name = "pnlContent"
-        Me.pnlContent.Size = New System.Drawing.Size(777, 470)
+        Me.pnlContent.Size = New System.Drawing.Size(804, 470)
         Me.pnlContent.TabIndex = 8
         Me.pnlContent.Visible = False
         '
@@ -164,7 +186,7 @@ Partial Class Chatbot
         Me.Guna2Button2.FillColor = System.Drawing.Color.Transparent
         Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Image = Global.ChatBotAI.My.Resources.Resources._29d49f5b4ca68f2634c61049838444aa
+        Me.Guna2Button2.Image = Global.ChatBotAI.My.Resources.Resources.refreshing2
         Me.Guna2Button2.Location = New System.Drawing.Point(880, 407)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.Size = New System.Drawing.Size(35, 34)
@@ -205,7 +227,7 @@ Partial Class Chatbot
         Me.Guna2GradientButton2.Image = Global.ChatBotAI.My.Resources.Resources.cognti
         Me.Guna2GradientButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.Guna2GradientButton2.ImageOffset = New System.Drawing.Point(12, 0)
-        Me.Guna2GradientButton2.Location = New System.Drawing.Point(0, 168)
+        Me.Guna2GradientButton2.Location = New System.Drawing.Point(1, 168)
         Me.Guna2GradientButton2.Name = "Guna2GradientButton2"
         Me.Guna2GradientButton2.Size = New System.Drawing.Size(196, 54)
         Me.Guna2GradientButton2.TabIndex = 15
@@ -277,7 +299,6 @@ Partial Class Chatbot
         Me.Controls.Add(Me.btnSend)
         Me.Controls.Add(Me.txtQuestion)
         Me.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Chatbot"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -306,4 +327,5 @@ Partial Class Chatbot
     Friend WithEvents Guna2GradientButton2 As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Guna2GradientButton3 As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents txtChat As RichTextBox
+    Friend WithEvents Guna2GradientButton1 As Guna.UI2.WinForms.Guna2GradientButton
 End Class

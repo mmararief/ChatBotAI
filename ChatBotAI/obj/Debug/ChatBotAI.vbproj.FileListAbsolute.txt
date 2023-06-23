@@ -414,3 +414,4 @@ C:\Users\Ando\Downloads\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.Register.resourc
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.Register.resources
 C:\Users\Ando\Downloads\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.RegisterNew.resources
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.RegisterNew.resources
+C:\Users\Ando\Downloads\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.about.resources

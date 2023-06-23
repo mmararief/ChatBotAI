@@ -144,10 +144,10 @@ Partial Class ImageGeneration
         Me.btnGenerateImage.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnGenerateImage.ForeColor = System.Drawing.Color.White
         Me.btnGenerateImage.Image = Global.ChatBotAI.My.Resources.Resources._0090e9b8adf1a5fccf110625b6969a2f
-        Me.btnGenerateImage.Location = New System.Drawing.Point(699, 405)
+        Me.btnGenerateImage.Location = New System.Drawing.Point(702, 409)
         Me.btnGenerateImage.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGenerateImage.Name = "btnGenerateImage"
-        Me.btnGenerateImage.Size = New System.Drawing.Size(36, 38)
+        Me.btnGenerateImage.Size = New System.Drawing.Size(25, 30)
         Me.btnGenerateImage.TabIndex = 8
         Me.btnGenerateImage.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.btnGenerateImage.UseTransparentBackground = True

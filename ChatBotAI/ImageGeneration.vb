@@ -91,4 +91,11 @@ Public Class ImageGeneration
 
     End Sub
 
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+    End Sub
+
+    Private Sub ImageGeneration_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

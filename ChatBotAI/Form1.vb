@@ -52,13 +52,17 @@ Public Class Form1
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+
+
         If CheckBox1.Checked = False Then
 
             txtPassword.PasswordChar = "●"
         Else
             txtPassword.PasswordChar = ""
         End If
+
     End Sub
+
 
     Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
@@ -77,4 +81,10 @@ Public Class Form1
         Dim RegisterNew As New RegisterNew()
         RegisterNew.Show()
     End Sub
+
+    Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
+
+    End Sub
+
+
 End Class
