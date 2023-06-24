@@ -1,18 +1,22 @@
-﻿Imports Newtonsoft.Json.Linq
+﻿Imports MySqlConnector
+Imports Newtonsoft.Json.Linq
+Imports System.Collections.ObjectModel
 Imports System.IO
 Imports System.Net.Http
 Imports System.Net.Http.Headers
 Imports System.Text
 Imports System.Web.UI.WebControls
 Imports System.Windows
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Window
 
 Public Class ImageGeneration
-    Public Shared image As String
-    Public Shared prompt As String
+    Dim apiKey As String = "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"
+    Dim apiUrl As String = "https://api.openai.com/v1/images/generations"
+    Dim prompt As String
+    Dim image As String
 
     Private Async Sub btnGenerateImage_Click(sender As Object, e As EventArgs) Handles btnGenerateImage.Click
-        Dim apiKey As String = "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"
-        Dim apiUrl As String = "https://api.openai.com/v1/images/generations"
+
         prompt = txtImage.Text
         Dim numImages As Integer = 1
         Dim imageSize As String = "1024x1024"
@@ -32,7 +36,7 @@ Public Class ImageGeneration
             ' Menerima dan membaca respons
             Dim jsonResponse As String = Await response.Content.ReadAsStringAsync()
 
-            ' Mendapatkan URL gambar dari respons JSON
+            ' Mendapatkan URL gambar dari respons JSONA
             Dim imageUrl As String = GetImageUrlFromJson(jsonResponse)
 
             image = imageUrl
@@ -82,20 +86,39 @@ Public Class ImageGeneration
         End If
     End Sub
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnPnlWa.Click
-        Form3.Show()
+    Private Async Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnPnlWa.Click
+        Dim connectionString As String = "server=103.153.3.20;user id=webkadupa_ammar;password=Juken12345678;database=webkadupa_bot"
+        Dim connection As New MySqlConnection(connectionString)
+        Dim username = Globals.loggedInUsername
+        Dim sql As String = "SELECT Number FROM users WHERE username = @username"
+        Dim command As New MySqlCommand(sql, connection)
+        command.Parameters.AddWithValue("@username", username)
+
+        connection.Open()
+        Dim reader As MySqlDataReader = command.ExecuteReader()
+        reader.Read()
+        Dim PhoneNumber = reader("Number").ToString()
+        Using client As New HttpClient()
+            Using content As New MultipartFormDataContent()
+                content.Add(New StringContent(image), "file")
+                content.Add(New StringContent(PhoneNumber), "number")
+                content.Add(New StringContent(prompt), "caption")
+
+                Try
+                    Dim response As HttpResponseMessage = Await client.PostAsync("https://ammar-wa.herokuapp.com/send-media", content)
+                    response.EnsureSuccessStatusCode()
+
+                    ' pesan berhasil terkirim
+                    MessageBox.Show("Gambar berhasil terkirim ke nomor " & PhoneNumber)
+                Catch ex As HttpRequestException
+                    ' nomor tidak ditemukan
+                    MessageBox.Show("Nomor tidak ditemukan." & image)
+                End Try
+            End Using
+        End Using
+
+        reader.Close()
+        connection.Close()
     End Sub
 
-
-    Private Sub Guna2CircleButton1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-
-    End Sub
-
-    Private Sub ImageGeneration_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

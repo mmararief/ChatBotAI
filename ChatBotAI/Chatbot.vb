@@ -7,8 +7,9 @@ Imports System.Web.UI.WebControls
 Imports Newtonsoft.Json.Linq
 
 Public Class Chatbot
+    Dim username = Form1.username
     Private Async Function callOpenAi(sQuestion As String) As Task(Of String)
-        Dim apiKey As String = "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"
+        Dim apiKey As String = "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"
         Dim apiUrl As String = "https://api.openai.com/v1/chat/completions"
         Dim responseContent As String = ""
 
@@ -125,10 +126,6 @@ Public Class Chatbot
 
     End Sub
 
-    Private Sub pnlContent_Paint(sender As Object, e As PaintEventArgs) Handles pnlContent.Paint
-
-    End Sub
-
     Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
         pnlContent.Visible = True
         With about
@@ -137,5 +134,14 @@ Public Class Chatbot
             .BringToFront()
             .Show()
         End With
+    End Sub
+
+    Private Sub Guna2HtmlLabel2_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+
+    Private Sub pnlContent_Paint(sender As Object, e As PaintEventArgs) Handles pnlContent.Paint
+
     End Sub
 End Class

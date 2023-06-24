@@ -13,9 +13,10 @@ Public Class RegisterNew
         Dim password As String = txtPassword.Text.Trim()
         Dim nama As String = txtNama.Text.Trim()
         Dim email As String = txtEmail.Text.Trim()
+        Dim number As String = txtNumber.Text.Trim()
 
         If String.IsNullOrWhiteSpace(username) OrElse String.IsNullOrWhiteSpace(password) OrElse String.IsNullOrWhiteSpace(nama) OrElse String.IsNullOrWhiteSpace(email) Then
-            MessageBox.Show("Username, nama, email, dan Kata sandi harus diisi.")
+            MessageBox.Show("Username, nama, email, Nomer Handphone dan Kata sandi harus diisi.")
             Return
         End If
 
@@ -23,10 +24,11 @@ Public Class RegisterNew
             connection.Open()
 
             ' Check if the username and password combination already exists
-            Dim selectQuery As String = "SELECT * FROM users WHERE username = @username OR password = @email"
+            Dim selectQuery As String = "SELECT * FROM users WHERE username = @username OR password = @email OR Number = @number"
             Dim selectCommand As New MySqlCommand(selectQuery, connection)
             selectCommand.Parameters.AddWithValue("@username", username)
             selectCommand.Parameters.AddWithValue("@email", email)
+            selectCommand.Parameters.AddWithValue("@number", number)
 
             Using reader As MySqlDataReader = selectCommand.ExecuteReader()
                 If reader.HasRows Then
@@ -36,12 +38,13 @@ Public Class RegisterNew
             End Using
 
             ' Insert the new user registration information
-            Dim insertQuery As String = "INSERT INTO users VALUES('', @email, @username, @nama, @password)"
+            Dim insertQuery As String = "INSERT INTO users VALUES('', @email, @username, @nama, @password, @Number)"
             Dim insertCommand As New MySqlCommand(insertQuery, connection)
             insertCommand.Parameters.AddWithValue("@username", username)
             insertCommand.Parameters.AddWithValue("@password", password)
             insertCommand.Parameters.AddWithValue("@nama", nama)
             insertCommand.Parameters.AddWithValue("@email", email)
+            insertCommand.Parameters.AddWithValue("@Number", number)
 
             insertCommand.ExecuteNonQuery()
 
@@ -51,5 +54,9 @@ Public Class RegisterNew
             Dim login As New Form1()
             login.Show()
         End Using
+    End Sub
+
+    Private Sub RegisterNew_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

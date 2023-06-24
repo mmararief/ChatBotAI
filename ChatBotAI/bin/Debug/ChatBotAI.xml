@@ -107,6 +107,11 @@ ChatBotAI
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ChatBotAI.My.Resources.Resources.pinpng_com_encryption_png_5109342">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ChatBotAI.My.Resources.Resources.PngItem_1298996">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

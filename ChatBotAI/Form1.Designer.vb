@@ -117,7 +117,7 @@ Partial Class Form1
         'btnLogin
         '
         Me.btnLogin.AutoRoundedCorners = True
-        Me.btnLogin.BorderRadius = 22
+        Me.btnLogin.BorderRadius = 18
         Me.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -125,9 +125,9 @@ Partial Class Form1
         Me.btnLogin.FillColor = System.Drawing.Color.DarkCyan
         Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.Location = New System.Drawing.Point(119, 261)
+        Me.btnLogin.Location = New System.Drawing.Point(49, 261)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(146, 46)
+        Me.btnLogin.Size = New System.Drawing.Size(276, 38)
         Me.btnLogin.TabIndex = 2
         Me.btnLogin.Text = "LOGIN"
         '
@@ -150,7 +150,7 @@ Partial Class Form1
         Me.Guna2Panel1.Location = New System.Drawing.Point(177, 53)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2Panel1.Size = New System.Drawing.Size(383, 357)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(364, 357)
         Me.Guna2Panel1.TabIndex = 0
         Me.Guna2Panel1.UseTransparentBackground = True
         '

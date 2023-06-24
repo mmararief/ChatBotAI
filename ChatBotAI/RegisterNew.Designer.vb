@@ -44,6 +44,8 @@ Partial Class RegisterNew
         Me.Guna2HtmlLabel10 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel11 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.txtNumber = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -100,7 +102,7 @@ Partial Class RegisterNew
         Me.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtEmail.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtEmail.Location = New System.Drawing.Point(364, 229)
+        Me.txtEmail.Location = New System.Drawing.Point(364, 292)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -113,7 +115,7 @@ Partial Class RegisterNew
         '
         Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Segoe UI Variable Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(364, 200)
+        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(364, 263)
         Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
         Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(42, 23)
         Me.Guna2HtmlLabel5.TabIndex = 21
@@ -130,7 +132,7 @@ Partial Class RegisterNew
         Me.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPassword.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPassword.Location = New System.Drawing.Point(364, 299)
+        Me.txtPassword.Location = New System.Drawing.Point(364, 362)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -143,7 +145,7 @@ Partial Class RegisterNew
         '
         Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Segoe UI Variable Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(364, 270)
+        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(364, 333)
         Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
         Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(75, 23)
         Me.Guna2HtmlLabel6.TabIndex = 23
@@ -160,7 +162,7 @@ Partial Class RegisterNew
         Me.txtNama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNama.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNama.Location = New System.Drawing.Point(364, 372)
+        Me.txtNama.Location = New System.Drawing.Point(364, 435)
         Me.txtNama.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNama.Name = "txtNama"
         Me.txtNama.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -173,7 +175,7 @@ Partial Class RegisterNew
         '
         Me.Guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Segoe UI Variable Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(364, 343)
+        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(364, 406)
         Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
         Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(77, 23)
         Me.Guna2HtmlLabel7.TabIndex = 25
@@ -191,7 +193,7 @@ Partial Class RegisterNew
         Me.txtSubmit.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.txtSubmit.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSubmit.ForeColor = System.Drawing.Color.White
-        Me.txtSubmit.Location = New System.Drawing.Point(364, 428)
+        Me.txtSubmit.Location = New System.Drawing.Point(364, 491)
         Me.txtSubmit.Name = "txtSubmit"
         Me.txtSubmit.Size = New System.Drawing.Size(160, 45)
         Me.txtSubmit.TabIndex = 27
@@ -201,7 +203,7 @@ Partial Class RegisterNew
         '
         Me.Guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel12.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel12.Location = New System.Drawing.Point(360, 491)
+        Me.Guna2HtmlLabel12.Location = New System.Drawing.Point(360, 554)
         Me.Guna2HtmlLabel12.Name = "Guna2HtmlLabel12"
         Me.Guna2HtmlLabel12.Size = New System.Drawing.Size(128, 18)
         Me.Guna2HtmlLabel12.TabIndex = 28
@@ -212,7 +214,7 @@ Partial Class RegisterNew
         Me.Guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel13.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel13.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.Guna2HtmlLabel13.Location = New System.Drawing.Point(489, 489)
+        Me.Guna2HtmlLabel13.Location = New System.Drawing.Point(489, 552)
         Me.Guna2HtmlLabel13.Name = "Guna2HtmlLabel13"
         Me.Guna2HtmlLabel13.Size = New System.Drawing.Size(70, 19)
         Me.Guna2HtmlLabel13.TabIndex = 29
@@ -255,7 +257,7 @@ Partial Class RegisterNew
         Me.Guna2Panel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Guna2Panel1.Location = New System.Drawing.Point(0, -1)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(307, 565)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(307, 611)
         Me.Guna2Panel1.TabIndex = 0
         '
         'Guna2HtmlLabel14
@@ -319,12 +321,44 @@ Partial Class RegisterNew
         Me.Guna2DragControl1.TargetControl = Me
         Me.Guna2DragControl1.UseTransparentDrag = True
         '
+        'txtNumber
+        '
+        Me.txtNumber.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtNumber.DefaultText = ""
+        Me.txtNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtNumber.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtNumber.Location = New System.Drawing.Point(364, 226)
+        Me.txtNumber.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtNumber.Name = "txtNumber"
+        Me.txtNumber.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtNumber.PlaceholderText = "Use your valid number phone here"
+        Me.txtNumber.SelectedText = ""
+        Me.txtNumber.Size = New System.Drawing.Size(283, 32)
+        Me.txtNumber.TabIndex = 31
+        '
+        'Guna2HtmlLabel8
+        '
+        Me.Guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel8.Font = New System.Drawing.Font("Segoe UI Variable Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(364, 197)
+        Me.Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
+        Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(118, 23)
+        Me.Guna2HtmlLabel8.TabIndex = 30
+        Me.Guna2HtmlLabel8.Text = "Number Phone"
+        '
         'RegisterNew
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(768, 543)
+        Me.ClientSize = New System.Drawing.Size(768, 609)
+        Me.Controls.Add(Me.txtNumber)
+        Me.Controls.Add(Me.Guna2HtmlLabel8)
         Me.Controls.Add(Me.Guna2HtmlLabel13)
         Me.Controls.Add(Me.Guna2HtmlLabel12)
         Me.Controls.Add(Me.txtSubmit)
@@ -369,4 +403,6 @@ Partial Class RegisterNew
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
+    Friend WithEvents txtNumber As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

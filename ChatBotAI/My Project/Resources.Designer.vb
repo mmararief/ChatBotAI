@@ -233,6 +233,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property pinpng_com_encryption_png_5109342() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("pinpng.com-encryption-png-5109342", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property PngItem_1298996() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("PngItem_1298996", resourceCulture)

@@ -366,7 +366,6 @@ C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.vbproj.Suggeste
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.Chatbot.resources
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.Form1.resources
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.Form2.resources
-C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.Form3.resources
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.ImageGeneration.resources
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.Resources.resources
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.vbproj.GenerateResource.cache
@@ -415,3 +414,5 @@ C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.Register.resour
 C:\Users\Ando\Downloads\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.RegisterNew.resources
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.RegisterNew.resources
 C:\Users\Ando\Downloads\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.about.resources
+C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.about.resources
+C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.OTP.resources
