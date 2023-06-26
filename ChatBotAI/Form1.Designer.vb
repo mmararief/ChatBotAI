@@ -46,9 +46,10 @@ Partial Class Form1
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.White
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(49, 97)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(74, 149)
+        Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(70, 21)
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(106, 29)
         Me.Guna2HtmlLabel1.TabIndex = 5
         Me.Guna2HtmlLabel1.Text = "Username" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -57,9 +58,10 @@ Partial Class Form1
         Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel2.ForeColor = System.Drawing.Color.White
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(49, 176)
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(74, 271)
+        Me.Guna2HtmlLabel2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(67, 21)
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(99, 29)
         Me.Guna2HtmlLabel2.TabIndex = 6
         Me.Guna2HtmlLabel2.Text = "Password"
         '
@@ -68,9 +70,10 @@ Partial Class Form1
         Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Segoe UI Variable Text", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel3.ForeColor = System.Drawing.Color.White
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(174, 39)
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(261, 60)
+        Me.Guna2HtmlLabel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(19, 28)
+        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(27, 40)
         Me.Guna2HtmlLabel3.TabIndex = 8
         Me.Guna2HtmlLabel3.Text = "Si"
         '
@@ -86,12 +89,13 @@ Partial Class Form1
         Me.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtUsername.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtUsername.Location = New System.Drawing.Point(49, 125)
+        Me.txtUsername.Location = New System.Drawing.Point(74, 192)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtUsername.PlaceholderText = "Input Username Here"
         Me.txtUsername.SelectedText = ""
-        Me.txtUsername.Size = New System.Drawing.Size(276, 36)
+        Me.txtUsername.Size = New System.Drawing.Size(414, 55)
         Me.txtUsername.TabIndex = 0
         '
         'txtPassword
@@ -106,18 +110,19 @@ Partial Class Form1
         Me.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtPassword.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPassword.Location = New System.Drawing.Point(49, 203)
+        Me.txtPassword.Location = New System.Drawing.Point(74, 312)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.txtPassword.PlaceholderText = "Input Password Here"
         Me.txtPassword.SelectedText = ""
-        Me.txtPassword.Size = New System.Drawing.Size(276, 36)
+        Me.txtPassword.Size = New System.Drawing.Size(414, 55)
         Me.txtPassword.TabIndex = 1
         '
         'btnLogin
         '
         Me.btnLogin.AutoRoundedCorners = True
-        Me.btnLogin.BorderRadius = 18
+        Me.btnLogin.BorderRadius = 28
         Me.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -125,9 +130,10 @@ Partial Class Form1
         Me.btnLogin.FillColor = System.Drawing.Color.DarkCyan
         Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.Location = New System.Drawing.Point(49, 261)
+        Me.btnLogin.Location = New System.Drawing.Point(74, 402)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(276, 38)
+        Me.btnLogin.Size = New System.Drawing.Size(414, 58)
         Me.btnLogin.TabIndex = 2
         Me.btnLogin.Text = "LOGIN"
         '
@@ -147,10 +153,11 @@ Partial Class Form1
         Me.Guna2Panel1.Controls.Add(Me.txtPassword)
         Me.Guna2Panel1.Controls.Add(Me.txtUsername)
         Me.Guna2Panel1.FillColor = System.Drawing.Color.Black
-        Me.Guna2Panel1.Location = New System.Drawing.Point(177, 53)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(266, 82)
+        Me.Guna2Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2Panel1.Size = New System.Drawing.Size(364, 357)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(546, 549)
         Me.Guna2Panel1.TabIndex = 0
         Me.Guna2Panel1.UseTransparentBackground = True
         '
@@ -159,9 +166,10 @@ Partial Class Form1
         Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Segoe UI Variable Display", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(305, 323)
+        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(458, 497)
+        Me.Guna2HtmlLabel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(51, 18)
+        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(73, 26)
         Me.Guna2HtmlLabel5.TabIndex = 10
         Me.Guna2HtmlLabel5.Text = "Register "
         '
@@ -170,9 +178,10 @@ Partial Class Form1
         Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Segoe UI Variable Text", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(162, Byte), Integer))
-        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(192, 35)
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(288, 54)
+        Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(73, 34)
+        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(109, 50)
         Me.Guna2HtmlLabel4.TabIndex = 9
         Me.Guna2HtmlLabel4.Text = "DUDU"
         '
@@ -182,9 +191,10 @@ Partial Class Form1
         Me.Guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Guna2PictureBox2.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox2.ImageRotate = 0!
-        Me.Guna2PictureBox2.Location = New System.Drawing.Point(98, 24)
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(147, 37)
+        Me.Guna2PictureBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Me.Guna2PictureBox2.Size = New System.Drawing.Size(63, 62)
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(94, 95)
         Me.Guna2PictureBox2.TabIndex = 7
         Me.Guna2PictureBox2.TabStop = False
         '
@@ -198,9 +208,10 @@ Partial Class Form1
         Me.CheckBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox2.ForeColor = System.Drawing.Color.Black
-        Me.CheckBox2.Location = New System.Drawing.Point(289, 131)
+        Me.CheckBox2.Location = New System.Drawing.Point(434, 202)
+        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(26, 25)
+        Me.CheckBox2.Size = New System.Drawing.Size(35, 32)
         Me.CheckBox2.TabIndex = 4
         Me.CheckBox2.Text = "   "
         Me.CheckBox2.UseVisualStyleBackColor = False
@@ -216,9 +227,10 @@ Partial Class Form1
         Me.CheckBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.Color.Black
-        Me.CheckBox1.Location = New System.Drawing.Point(286, 206)
+        Me.CheckBox1.Location = New System.Drawing.Point(429, 317)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(31, 30)
+        Me.CheckBox1.Size = New System.Drawing.Size(41, 39)
         Me.CheckBox1.TabIndex = 3
         Me.CheckBox1.Text = "   "
         Me.CheckBox1.UseVisualStyleBackColor = False
@@ -227,22 +239,24 @@ Partial Class Form1
         '
         Me.Guna2PictureBox1.Image = Global.ChatBotAI.My.Resources.Resources._131321_green_and_black_polygon_background_graphic_design_vector_art
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-2, -4)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-3, -6)
+        Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(785, 464)
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(1178, 714)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.Guna2PictureBox1.TabIndex = 1
         Me.Guna2PictureBox1.TabStop = False
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(763, 450)
+        Me.ClientSize = New System.Drawing.Size(1144, 692)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.Guna2PictureBox1)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Form1"
         Me.Text = "Login"
         Me.Guna2Panel1.ResumeLayout(False)

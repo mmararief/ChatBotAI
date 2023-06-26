@@ -416,3 +416,4 @@ C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.RegisterNew.res
 C:\Users\Ando\Downloads\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.about.resources
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.about.resources
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Debug\ChatBotAI.OTP.resources
+C:\Users\arief\Documents\ChatBotAI\ChatBotAI\bin\Debug\QRCoder.dll

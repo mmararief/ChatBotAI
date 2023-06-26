@@ -10,7 +10,11 @@ Imports System.Windows
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Window
 
 Public Class ImageGeneration
-    Dim apiKey As String = "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"
+
+    Dim connectionString As String = "server=103.153.3.20;user id=webkadupa_ammar;password=Juken12345678;database=webkadupa_bot"
+    Dim connection As New MySqlConnection(connectionString)
+    Dim username As String = Globals.loggedInUsername
+    Dim apiKey As String = "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"
     Dim apiUrl As String = "https://api.openai.com/v1/images/generations"
     Dim prompt As String
     Dim image As String
@@ -40,6 +44,8 @@ Public Class ImageGeneration
             Dim imageUrl As String = GetImageUrlFromJson(jsonResponse)
 
             image = imageUrl
+
+            InsertImage(username, image, prompt)
 
             ' Menampilkan gambar di PictureBox
             PictureBox1.Load(imageUrl)
@@ -121,4 +127,17 @@ Public Class ImageGeneration
         connection.Close()
     End Sub
 
+    Private Function InsertImage(username As String, image As String, prompt As String)
+        Using connection As New MySqlConnection(connectionString)
+            connection.Open()
+
+            Dim query As String = "INSERT INTO ImageGen (username, image, prompt) VALUES (@username, @image, @prompt)"
+            Dim command As New MySqlCommand(query, connection)
+            command.Parameters.AddWithValue("@Username", username)
+            command.Parameters.AddWithValue("@image", image)
+            command.Parameters.AddWithValue("@prompt", prompt)
+            command.ExecuteNonQuery()
+
+        End Using
+    End Function
 End Class

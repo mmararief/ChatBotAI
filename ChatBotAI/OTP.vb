@@ -23,6 +23,37 @@ Public Class OTP
         End If
     End Sub
 
+    Private Async Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+        otp = GenerateOTP() ' Menghasilkan OTP acak
+        Dim pesan As String = "Kode OTP Anda adalah: " & otp
+
+        Dim postData As String = "number=" & Number & "&message=" & pesan
+        Using client As New HttpClient()
+            Dim content As New StringContent(postData, Encoding.UTF8, "application/x-www-form-urlencoded")
+
+            Try
+                Dim response As HttpResponseMessage = Await client.PostAsync("https://ammar-wa.herokuapp.com/send-message", content)
+                response.EnsureSuccessStatusCode()
+                MessageBox.Show("Kode OTP baru telah dikirim.")
+
+            Catch ex As HttpRequestException
+                ' Nomor tidak ditemukan
+                MessageBox.Show("Nomor tidak ditemukan: " & Number)
+            End Try
+        End Using
+    End Sub
+
+    Private Function GenerateOTP() As String
+        Dim otp As String = ""
+        Dim random As New Random()
+
+        For i As Integer = 1 To 6
+            otp &= random.Next(0, 10)
+        Next
+
+        Return otp
+    End Function
+
     Private Sub otp1_TextChanged(sender As Object, e As EventArgs) Handles otp1.TextChanged
         If otp1.Text.Length = 1 Then
             otp2.Focus()
@@ -89,34 +120,5 @@ Public Class OTP
     End Sub
 
 
-    Private Async Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
-        otp = GenerateOTP() ' Menghasilkan OTP acak
-        Dim pesan As String = "Kode OTP Anda adalah: " & otp
 
-        Dim postData As String = "number=" & Number & "&message=" & pesan
-        Using client As New HttpClient()
-            Dim content As New StringContent(postData, Encoding.UTF8, "application/x-www-form-urlencoded")
-
-            Try
-                Dim response As HttpResponseMessage = Await client.PostAsync("https://ammar-wa.herokuapp.com/send-message", content)
-                response.EnsureSuccessStatusCode()
-                MessageBox.Show("Kode OTP baru telah dikirim.")
-
-            Catch ex As HttpRequestException
-                ' Nomor tidak ditemukan
-                MessageBox.Show("Nomor tidak ditemukan: " & Number)
-            End Try
-        End Using
-    End Sub
-
-    Private Function GenerateOTP() As String
-        Dim otp As String = ""
-        Dim random As New Random()
-
-        For i As Integer = 1 To 6
-            otp &= random.Next(0, 10)
-        Next
-
-        Return otp
-    End Function
 End Class

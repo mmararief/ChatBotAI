@@ -167,7 +167,6 @@ C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Release\ChatBotAI.about.resourc
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Release\ChatBotAI.Chatbot.resources
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Release\ChatBotAI.Form1.resources
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Release\ChatBotAI.Form2.resources
-C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Release\ChatBotAI.Form3.resources
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Release\ChatBotAI.ImageGeneration.resources
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Release\ChatBotAI.Resources.resources
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Release\ChatBotAI.OTP.resources
