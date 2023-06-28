@@ -1,20 +1,14 @@
 ﻿Imports MySqlConnector
 Imports Newtonsoft.Json.Linq
-Imports System.Collections.ObjectModel
-Imports System.IO
 Imports System.Net.Http
-Imports System.Net.Http.Headers
 Imports System.Text
-Imports System.Web.UI.WebControls
 Imports System.Windows
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Window
-
 Public Class ImageGeneration
 
     Dim connectionString As String = "server=103.153.3.20;user id=webkadupa_ammar;password=Juken12345678;database=webkadupa_bot"
     Dim connection As New MySqlConnection(connectionString)
     Dim username As String = Globals.loggedInUsername
-    Dim apiKey As String = "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"
+    Dim apiKey As String = "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"
     Dim apiUrl As String = "https://api.openai.com/v1/images/generations"
     Dim prompt As String
     Dim image As String

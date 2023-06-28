@@ -4,11 +4,6 @@ Imports System.Text
 Public Class OTP
     Dim otp = Form1.otpCode
     Dim Number = Form1.PhoneNumber
-    Private Sub OTP_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
-
-    End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         Dim userEnteredOTP As String = otp1.Text & otp2.Text & otp3.Text & otp4.Text & otp5.Text & otp6.Text

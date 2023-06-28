@@ -1,26 +1,16 @@
-﻿Imports System.Collections.ObjectModel
-Imports System.Data.Common
-Imports System.Data.SqlClient
-Imports System.IO
-Imports System.Net
-Imports System.Net.Http
+﻿Imports System.Net.Http
 Imports System.Text
-
-Imports System.Web.UI.WebControls
 Imports MySqlConnector
 Imports Newtonsoft.Json.Linq
-
 Imports QRCoder
-
-
-
 Public Class Chatbot
     Dim id As String
     Dim connectionString As String = "server=103.153.3.20;user id=webkadupa_ammar;password=Juken12345678;database=webkadupa_bot"
     Dim connection As New MySqlConnection(connectionString)
     Dim username As String = Globals.loggedInUsername
+    Dim urlLink As String
     Private Async Function callOpenAi(sQuestion As String) As Task(Of String)
-        Dim apiKey As String = "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"
+        Dim apiKey As String = "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"
         Dim apiUrl As String = "https://api.openai.com/v1/chat/completions"
         Dim responseContent As String = ""
 
@@ -28,7 +18,7 @@ Public Class Chatbot
         Dim httpClient As New HttpClient()
         httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " & apiKey)
 
-        ' Membuat body JSON
+        ' Membuat bod JSON
         Dim body As String = $"{{""model"": ""gpt-3.5-turbo"", ""messages"": [{{""role"": ""user"", ""content"": ""{cleanString(sQuestion)}""}}]}}"
         Dim content As New StringContent(body, Encoding.UTF8, "application/json")
 
@@ -64,10 +54,6 @@ Public Class Chatbot
             Return Replace(s, """", "\""")
         End If
     End Function
-    Private isFirstSend As Boolean = True ' Track if it's the first send
-
-
-
     Private Async Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
         Dim humanMessage As String = "    Human     : " & txtQuestion.Text
 
@@ -81,16 +67,12 @@ Public Class Chatbot
         If Not String.IsNullOrEmpty(response) Then
             Dim duduMessage As String = "    Dudu        : "
             Dim formattedResponse As String = response.Replace(vbCrLf, " ")
-
             ' Menambahkan pesan Dudu
             txtChat.SelectionFont = New Font(txtChat.Font, FontStyle.Regular)
             txtChat.AppendText(vbCrLf & duduMessage & formattedResponse)
-
             ' Menyimpan chat ke database
             Dim chatMessage As String = humanMessage & vbNewLine & duduMessage & formattedResponse
             InsertChatMessage(username, chatMessage)
-
-
         End If
 
         ' Mengatur scroll ke paling bawah
@@ -109,13 +91,8 @@ Public Class Chatbot
             command.Parameters.AddWithValue("@Username", username)
             command.Parameters.AddWithValue("@Message", message)
             command.ExecuteNonQuery()
-
         End Using
     End Function
-
-
-
-
 
     Private Sub txtQuestion_KeyDown(sender As Object, e As KeyEventArgs) Handles txtQuestion.KeyDown
         If txtQuestion.Text IsNot "" AndAlso e.KeyCode = Keys.Enter Then
@@ -155,6 +132,7 @@ Public Class Chatbot
         Guna2GradientButton2.FillColor = Color.MidnightBlue
         Guna2GradientButton3.FillColor = Color.FromArgb(64, 64, 64)
         Dim url As String = $"https://sidudu-api-ff370fef1b26.herokuapp.com/image/{username}"
+        urlLink = url
         Dim qrGenerator As New QRCodeGenerator()
         Dim qrCodeData As QRCodeData = qrGenerator.CreateQrCode(url, QRCodeGenerator.ECCLevel.Q)
         Dim qrCode As New QRCode(qrCodeData)
@@ -170,6 +148,7 @@ Public Class Chatbot
         Guna2GradientButton3.FillColor = Color.FromArgb(49, 195, 162)
 
         Dim url As String = $"https://sidudu-api-ff370fef1b26.herokuapp.com/chat/{username}"
+        urlLink = url
         Dim qrGenerator As New QRCodeGenerator()
         Dim qrCodeData As QRCodeData = qrGenerator.CreateQrCode(url, QRCodeGenerator.ECCLevel.Q)
         Dim qrCode As New QRCode(qrCodeData)
@@ -189,18 +168,18 @@ Public Class Chatbot
         End With
     End Sub
 
-
-    Private Sub pnlContent_Paint(sender As Object, e As PaintEventArgs) Handles pnlContent.Paint
-
-    End Sub
-
     Private Sub Chatbot_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim url As String = $"https://sidudu-api-ff370fef1b26.herokuapp.com/chat/{username}"
+        urlLink = url
         Dim qrGenerator As New QRCodeGenerator()
         Dim qrCodeData As QRCodeData = qrGenerator.CreateQrCode(url, QRCodeGenerator.ECCLevel.Q)
         Dim qrCode As New QRCode(qrCodeData)
         Dim qrCodeImage As Bitmap = qrCode.GetGraphic(10)
 
         QRCodePictureBox.Image = qrCodeImage
+    End Sub
+
+    Private Sub QRCodePictureBox_Click(sender As Object, e As EventArgs) Handles QRCodePictureBox.Click
+        System.Diagnostics.Process.Start(urlLink)
     End Sub
 End Class

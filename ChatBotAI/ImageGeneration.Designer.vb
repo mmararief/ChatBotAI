@@ -60,7 +60,7 @@ Partial Class ImageGeneration
         Me.txtImage.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtImage.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtImage.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtImage.Location = New System.Drawing.Point(59, 405)
+        Me.txtImage.Location = New System.Drawing.Point(59, 432)
         Me.txtImage.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txtImage.Name = "txtImage"
         Me.txtImage.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -125,7 +125,7 @@ Partial Class ImageGeneration
         Me.btnPnlWa.Name = "btnPnlWa"
         Me.btnPnlWa.Size = New System.Drawing.Size(127, 27)
         Me.btnPnlWa.TabIndex = 11
-        Me.btnPnlWa.Text = "Share"
+        Me.btnPnlWa.Text = "Save To Whatsapp"
         '
         'Timer1
         '
@@ -144,7 +144,7 @@ Partial Class ImageGeneration
         Me.btnGenerateImage.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnGenerateImage.ForeColor = System.Drawing.Color.White
         Me.btnGenerateImage.Image = Global.ChatBotAI.My.Resources.Resources._0090e9b8adf1a5fccf110625b6969a2f
-        Me.btnGenerateImage.Location = New System.Drawing.Point(702, 409)
+        Me.btnGenerateImage.Location = New System.Drawing.Point(702, 436)
         Me.btnGenerateImage.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGenerateImage.Name = "btnGenerateImage"
         Me.btnGenerateImage.Size = New System.Drawing.Size(25, 30)
@@ -169,7 +169,7 @@ Partial Class ImageGeneration
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(791, 468)
+        Me.ClientSize = New System.Drawing.Size(791, 508)
         Me.Controls.Add(Me.btnPnlWa)
         Me.Controls.Add(Me.Guna2TextBox1)
         Me.Controls.Add(Me.btnGenerateImage)
