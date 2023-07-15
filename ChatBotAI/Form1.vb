@@ -1,18 +1,14 @@
 ﻿Imports System.Net.Http
-Imports System.Web.UI.WebControls
-Imports Guna.UI2.WinForms
 Imports MySqlConnector
-Imports System.Globalization
 Imports System.Text
 
 Public Module Globals
     Public loggedInUsername As String
     Public loggedInNumber As String
-    ' Tambahkan variabel lain yang diperlukan
 End Module
 
 Public Class Form1
-    Dim connectionString As String = "server=103.153.3.20;user id=webkadupa_ammar;password=Juken12345678;database=webkadupa_bot"
+    Dim connectionString As String = "server=localhost;user id=root;password=;database=bot_sidudu"
     Dim connection As New MySqlConnection(connectionString)
     Public Shared username As String
 
@@ -56,7 +52,7 @@ Public Class Form1
                         Dim content As New StringContent(postData, Encoding.UTF8, "application/x-www-form-urlencoded")
 
                         Try
-                            Dim response As HttpResponseMessage = Await client.PostAsync("https://ammar-wa.herokuapp.com/send-message", content)
+                            Dim response As HttpResponseMessage = Await client.PostAsync("http://127.0.0.1:8000/send-message", content)
                             response.EnsureSuccessStatusCode()
 
                             ' Pesan berhasil terkirim
@@ -132,7 +128,7 @@ Public Class Form1
                     Dim content As New StringContent(postData, Encoding.UTF8, "application/x-www-form-urlencoded")
                     Try
 
-                        Dim response As HttpResponseMessage = Await client.PostAsync("https://ammar-wa.herokuapp.com/send-message", content)
+                        Dim response As HttpResponseMessage = Await client.PostAsync("http://127.0.0.1:8000/send-message", content)
                         response.EnsureSuccessStatusCode()
                         'pesan berhasil terkirim
                         OTP.Show()
@@ -165,11 +161,4 @@ Public Class Form1
         Return otp
     End Function
 
-    Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
-
-    End Sub
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

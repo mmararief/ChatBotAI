@@ -178,3 +178,4 @@ C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Release\ChatBotAI.vbproj.CopyCo
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Release\ChatBotAI.exe
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Release\ChatBotAI.xml
 C:\Users\arief\Documents\ChatBotAI\ChatBotAI\obj\Release\ChatBotAI.pdb
+C:\Users\arief\Documents\ChatBotAI\ChatBotAI\bin\Release\QRCoder.dll

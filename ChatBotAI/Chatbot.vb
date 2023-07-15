@@ -1,16 +1,19 @@
-﻿Imports System.Net.Http
+﻿Imports System.Net
+Imports System.Net.Http
+Imports System.Net.NetworkInformation
 Imports System.Text
 Imports MySqlConnector
 Imports Newtonsoft.Json.Linq
 Imports QRCoder
 Public Class Chatbot
     Dim id As String
-    Dim connectionString As String = "server=103.153.3.20;user id=webkadupa_ammar;password=Juken12345678;database=webkadupa_bot"
+    Dim connectionString As String = "server=localhost;user id=root;password=;database=bot_sidudu"
     Dim connection As New MySqlConnection(connectionString)
     Dim username As String = Globals.loggedInUsername
+    Dim IPv4 As String
     Dim urlLink As String
     Private Async Function callOpenAi(sQuestion As String) As Task(Of String)
-        Dim apiKey As String = "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"
+        Dim apiKey As String = "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"
         Dim apiUrl As String = "https://api.openai.com/v1/chat/completions"
         Dim responseContent As String = ""
 
@@ -131,7 +134,7 @@ Public Class Chatbot
         End With
         Guna2GradientButton2.FillColor = Color.MidnightBlue
         Guna2GradientButton3.FillColor = Color.FromArgb(64, 64, 64)
-        Dim url As String = $"https://sidudu-api-ff370fef1b26.herokuapp.com/image/{username}"
+        Dim url As String = $"http://{IPv4}:3000/image/{username}"
         urlLink = url
         Dim qrGenerator As New QRCodeGenerator()
         Dim qrCodeData As QRCodeData = qrGenerator.CreateQrCode(url, QRCodeGenerator.ECCLevel.Q)
@@ -147,7 +150,7 @@ Public Class Chatbot
         Guna2GradientButton2.FillColor = Color.FromArgb(64, 64, 64)
         Guna2GradientButton3.FillColor = Color.FromArgb(49, 195, 162)
 
-        Dim url As String = $"https://sidudu-api-ff370fef1b26.herokuapp.com/chat/{username}"
+        Dim url As String = $"http://{IPv4}:3000/chat/{username}"
         urlLink = url
         Dim qrGenerator As New QRCodeGenerator()
         Dim qrCodeData As QRCodeData = qrGenerator.CreateQrCode(url, QRCodeGenerator.ECCLevel.Q)
@@ -169,7 +172,7 @@ Public Class Chatbot
     End Sub
 
     Private Sub Chatbot_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim url As String = $"https://sidudu-api-ff370fef1b26.herokuapp.com/chat/{username}"
+        Dim url As String = $"http://{IPv4}:3000/chat/{username}"
         urlLink = url
         Dim qrGenerator As New QRCodeGenerator()
         Dim qrCodeData As QRCodeData = qrGenerator.CreateQrCode(url, QRCodeGenerator.ECCLevel.Q)
@@ -177,6 +180,18 @@ Public Class Chatbot
         Dim qrCodeImage As Bitmap = qrCode.GetGraphic(10)
 
         QRCodePictureBox.Image = qrCodeImage
+
+        ' Memperoleh semua alamat IP yang terhubung dengan komputer
+        Dim hostName As String = Dns.GetHostName()
+        Dim ipEntry As IPHostEntry = Dns.GetHostEntry(hostName)
+        Dim ipAddresses As IPAddress() = ipEntry.AddressList
+
+        ' Menampilkan alamat IPv4
+        For Each ipAddress As IPAddress In ipAddresses
+            If ipAddress.AddressFamily = Net.Sockets.AddressFamily.InterNetwork Then
+                IPv4 = ipAddress.ToString()
+            End If
+        Next
     End Sub
 
     Private Sub QRCodePictureBox_Click(sender As Object, e As EventArgs) Handles QRCodePictureBox.Click

@@ -41,9 +41,10 @@ Partial Class about
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Consolas", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.White
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(19, 28)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(28, 43)
+        Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(53, 24)
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(83, 36)
         Me.Guna2HtmlLabel1.TabIndex = 19
         Me.Guna2HtmlLabel1.Text = "About"
         '
@@ -56,11 +57,10 @@ Partial Class about
         Me.Guna2CircleButton1.FillColor = System.Drawing.Color.Red
         Me.Guna2CircleButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2CircleButton1.ForeColor = System.Drawing.Color.White
-        Me.Guna2CircleButton1.Location = New System.Drawing.Point(17, 93)
-        Me.Guna2CircleButton1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Guna2CircleButton1.Location = New System.Drawing.Point(26, 143)
         Me.Guna2CircleButton1.Name = "Guna2CircleButton1"
         Me.Guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2CircleButton1.Size = New System.Drawing.Size(19, 18)
+        Me.Guna2CircleButton1.Size = New System.Drawing.Size(28, 28)
         Me.Guna2CircleButton1.TabIndex = 21
         Me.Guna2CircleButton1.Text = "Guna2CircleButton1"
         '
@@ -73,11 +73,10 @@ Partial Class about
         Me.Guna2CircleButton2.FillColor = System.Drawing.Color.Yellow
         Me.Guna2CircleButton2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2CircleButton2.ForeColor = System.Drawing.Color.White
-        Me.Guna2CircleButton2.Location = New System.Drawing.Point(40, 93)
-        Me.Guna2CircleButton2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Guna2CircleButton2.Location = New System.Drawing.Point(60, 143)
         Me.Guna2CircleButton2.Name = "Guna2CircleButton2"
         Me.Guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2CircleButton2.Size = New System.Drawing.Size(19, 18)
+        Me.Guna2CircleButton2.Size = New System.Drawing.Size(28, 28)
         Me.Guna2CircleButton2.TabIndex = 22
         Me.Guna2CircleButton2.Text = "Guna2CircleButton2"
         '
@@ -90,11 +89,10 @@ Partial Class about
         Me.Guna2CircleButton3.FillColor = System.Drawing.Color.Lime
         Me.Guna2CircleButton3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2CircleButton3.ForeColor = System.Drawing.Color.White
-        Me.Guna2CircleButton3.Location = New System.Drawing.Point(63, 93)
-        Me.Guna2CircleButton3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Guna2CircleButton3.Location = New System.Drawing.Point(94, 143)
         Me.Guna2CircleButton3.Name = "Guna2CircleButton3"
         Me.Guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2CircleButton3.Size = New System.Drawing.Size(19, 18)
+        Me.Guna2CircleButton3.Size = New System.Drawing.Size(28, 28)
         Me.Guna2CircleButton3.TabIndex = 23
         Me.Guna2CircleButton3.Text = "Guna2CircleButton3"
         '
@@ -103,9 +101,10 @@ Partial Class about
         Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Microsoft YaHei UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(161, Byte))
         Me.Guna2HtmlLabel3.ForeColor = System.Drawing.Color.White
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(12, 47)
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(18, 72)
+        Me.Guna2HtmlLabel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(162, 41)
+        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(241, 60)
         Me.Guna2HtmlLabel3.TabIndex = 25
         Me.Guna2HtmlLabel3.Text = "Chatbot AI"
         '
@@ -115,9 +114,10 @@ Partial Class about
         Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel4.ForeColor = System.Drawing.Color.White
-        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(26, 22)
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(39, 34)
+        Me.Guna2HtmlLabel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(627, 87)
+        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(940, 134)
         Me.Guna2HtmlLabel4.TabIndex = 20
         Me.Guna2HtmlLabel4.Text = resources.GetString("Guna2HtmlLabel4.Text")
         '
@@ -126,9 +126,10 @@ Partial Class about
         Me.Guna2GradientPanel1.Controls.Add(Me.Guna2HtmlLabel4)
         Me.Guna2GradientPanel1.FillColor = System.Drawing.Color.Black
         Me.Guna2GradientPanel1.FillColor2 = System.Drawing.Color.Transparent
-        Me.Guna2GradientPanel1.Location = New System.Drawing.Point(-14, 135)
+        Me.Guna2GradientPanel1.Location = New System.Drawing.Point(-21, 208)
+        Me.Guna2GradientPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Me.Guna2GradientPanel1.Size = New System.Drawing.Size(673, 128)
+        Me.Guna2GradientPanel1.Size = New System.Drawing.Size(1010, 197)
         Me.Guna2GradientPanel1.TabIndex = 26
         '
         'Guna2HtmlLabel2
@@ -147,18 +148,19 @@ Partial Class about
         '
         Me.PictureBox1.BackgroundImage = Global.ChatBotAI.My.Resources.Resources._001
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(538, 278)
+        Me.PictureBox1.Location = New System.Drawing.Point(807, 428)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(169, 184)
+        Me.PictureBox1.Size = New System.Drawing.Size(254, 283)
         Me.PictureBox1.TabIndex = 24
         Me.PictureBox1.TabStop = False
         '
         'about
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(775, 496)
+        Me.ClientSize = New System.Drawing.Size(1162, 763)
         Me.Controls.Add(Me.Guna2HtmlLabel3)
         Me.Controls.Add(Me.Guna2CircleButton3)
         Me.Controls.Add(Me.Guna2CircleButton2)
@@ -167,6 +169,7 @@ Partial Class about
         Me.Controls.Add(Me.Guna2GradientPanel1)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "about"
         Me.Text = "A"
         Me.Guna2GradientPanel1.ResumeLayout(False)

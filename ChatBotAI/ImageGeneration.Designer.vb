@@ -39,9 +39,10 @@ Partial Class ImageGeneration
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.White
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(67, 44)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(100, 66)
+        Me.Guna2HtmlLabel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(189, 27)
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(274, 39)
         Me.Guna2HtmlLabel1.TabIndex = 1
         Me.Guna2HtmlLabel1.Text = "Image Generation"
         '
@@ -60,15 +61,15 @@ Partial Class ImageGeneration
         Me.txtImage.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtImage.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtImage.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtImage.Location = New System.Drawing.Point(59, 432)
-        Me.txtImage.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.txtImage.Location = New System.Drawing.Point(88, 695)
+        Me.txtImage.Margin = New System.Windows.Forms.Padding(8, 9, 8, 9)
         Me.txtImage.Name = "txtImage"
         Me.txtImage.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtImage.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtImage.PlaceholderText = "Generate image"
         Me.txtImage.SelectedText = ""
         Me.txtImage.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(15)
-        Me.txtImage.Size = New System.Drawing.Size(677, 38)
+        Me.txtImage.Size = New System.Drawing.Size(1016, 57)
         Me.txtImage.TabIndex = 7
         '
         'btnSaveImage
@@ -80,9 +81,10 @@ Partial Class ImageGeneration
         Me.btnSaveImage.FillColor = System.Drawing.Color.Green
         Me.btnSaveImage.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnSaveImage.ForeColor = System.Drawing.Color.White
-        Me.btnSaveImage.Location = New System.Drawing.Point(59, 324)
+        Me.btnSaveImage.Location = New System.Drawing.Point(88, 486)
+        Me.btnSaveImage.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSaveImage.Name = "btnSaveImage"
-        Me.btnSaveImage.Size = New System.Drawing.Size(95, 27)
+        Me.btnSaveImage.Size = New System.Drawing.Size(142, 40)
         Me.btnSaveImage.TabIndex = 9
         Me.btnSaveImage.Text = "Save Image"
         '
@@ -101,15 +103,15 @@ Partial Class ImageGeneration
         Me.Guna2TextBox1.Font = New System.Drawing.Font("Nirmala UI", 12.0!)
         Me.Guna2TextBox1.ForeColor = System.Drawing.Color.White
         Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(59, 81)
-        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Guna2TextBox1.Location = New System.Drawing.Point(88, 122)
+        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(6)
         Me.Guna2TextBox1.Multiline = True
         Me.Guna2TextBox1.Name = "Guna2TextBox1"
         Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox1.PlaceholderText = ""
         Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(228, 221)
+        Me.Guna2TextBox1.Size = New System.Drawing.Size(342, 332)
         Me.Guna2TextBox1.TabIndex = 10
         '
         'btnPnlWa
@@ -121,9 +123,10 @@ Partial Class ImageGeneration
         Me.btnPnlWa.FillColor = System.Drawing.Color.Green
         Me.btnPnlWa.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnPnlWa.ForeColor = System.Drawing.Color.White
-        Me.btnPnlWa.Location = New System.Drawing.Point(159, 324)
+        Me.btnPnlWa.Location = New System.Drawing.Point(238, 486)
+        Me.btnPnlWa.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPnlWa.Name = "btnPnlWa"
-        Me.btnPnlWa.Size = New System.Drawing.Size(127, 27)
+        Me.btnPnlWa.Size = New System.Drawing.Size(190, 40)
         Me.btnPnlWa.TabIndex = 11
         Me.btnPnlWa.Text = "Save To Whatsapp"
         '
@@ -144,10 +147,10 @@ Partial Class ImageGeneration
         Me.btnGenerateImage.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnGenerateImage.ForeColor = System.Drawing.Color.White
         Me.btnGenerateImage.Image = Global.ChatBotAI.My.Resources.Resources._0090e9b8adf1a5fccf110625b6969a2f
-        Me.btnGenerateImage.Location = New System.Drawing.Point(702, 436)
-        Me.btnGenerateImage.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnGenerateImage.Location = New System.Drawing.Point(1053, 701)
+        Me.btnGenerateImage.Margin = New System.Windows.Forms.Padding(6)
         Me.btnGenerateImage.Name = "btnGenerateImage"
-        Me.btnGenerateImage.Size = New System.Drawing.Size(25, 30)
+        Me.btnGenerateImage.Size = New System.Drawing.Size(38, 45)
         Me.btnGenerateImage.TabIndex = 8
         Me.btnGenerateImage.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
         Me.btnGenerateImage.UseTransparentBackground = True
@@ -157,19 +160,20 @@ Partial Class ImageGeneration
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.FillColor = System.Drawing.Color.Transparent
         Me.PictureBox1.ImageRotate = 0!
-        Me.PictureBox1.Location = New System.Drawing.Point(320, 44)
+        Me.PictureBox1.Location = New System.Drawing.Point(480, 66)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(416, 307)
+        Me.PictureBox1.Size = New System.Drawing.Size(623, 460)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
         'ImageGeneration
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(144.0!, 144.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(791, 508)
+        Me.ClientSize = New System.Drawing.Size(1186, 794)
         Me.Controls.Add(Me.btnPnlWa)
         Me.Controls.Add(Me.Guna2TextBox1)
         Me.Controls.Add(Me.btnGenerateImage)
@@ -179,6 +183,7 @@ Partial Class ImageGeneration
         Me.Controls.Add(Me.PictureBox1)
         Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ImageGeneration"
         Me.Text = "ImageGeneration"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

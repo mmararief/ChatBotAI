@@ -5,10 +5,10 @@ Imports System.Text
 Imports System.Windows
 Public Class ImageGeneration
 
-    Dim connectionString As String = "server=103.153.3.20;user id=webkadupa_ammar;password=Juken12345678;database=webkadupa_bot"
+    Dim connectionString As String = "server=localhost;user id=root;password=;database=bot_sidudu"
     Dim connection As New MySqlConnection(connectionString)
     Dim username As String = Globals.loggedInUsername
-    Dim apiKey As String = "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"
+    Dim apiKey As String = "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"
     Dim apiUrl As String = "https://api.openai.com/v1/images/generations"
     Dim prompt As String
     Dim image As String
@@ -87,8 +87,6 @@ Public Class ImageGeneration
     End Sub
 
     Private Async Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnPnlWa.Click
-        Dim connectionString As String = "server=103.153.3.20;user id=webkadupa_ammar;password=Juken12345678;database=webkadupa_bot"
-        Dim connection As New MySqlConnection(connectionString)
         Dim username = Globals.loggedInUsername
         Dim sql As String = "SELECT Number FROM users WHERE username = @username"
         Dim command As New MySqlCommand(sql, connection)
@@ -105,7 +103,7 @@ Public Class ImageGeneration
                 content.Add(New StringContent(prompt), "caption")
 
                 Try
-                    Dim response As HttpResponseMessage = Await client.PostAsync("https://ammar-wa.herokuapp.com/send-media", content)
+                    Dim response As HttpResponseMessage = Await client.PostAsync("https://127.0.0.1:8000/send-media", content)
                     response.EnsureSuccessStatusCode()
 
                     ' pesan berhasil terkirim
@@ -134,4 +132,6 @@ Public Class ImageGeneration
 
         End Using
     End Function
+
+
 End Class

@@ -1,6 +1,6 @@
 ﻿Imports MySqlConnector
 Public Class Register
-    Dim connectionString As String = "server=103.153.3.20;user id=webkadupa_ammar;password=Juken12345678;database=webkadupa_bot"
+    Dim connectionString As String = "server=localhost;user id=root;password=;database=bot_sidudu"
     Dim connection As New MySqlConnection(connectionString)
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click

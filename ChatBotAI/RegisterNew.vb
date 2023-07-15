@@ -1,6 +1,6 @@
 ﻿Imports MySqlConnector
 Public Class RegisterNew
-    Private connectionString As String = "server=103.153.3.20;user id=webkadupa_ammar;password=Juken12345678;database=webkadupa_bot"
+    Private connectionString As String = "server=localhost;user id=root;password=;database=bot_sidudu"
 
 
     Private Sub Guna2HtmlLabel13_Click(sender As Object, e As EventArgs) Handles Guna2HtmlLabel13.Click
@@ -56,7 +56,4 @@ Public Class RegisterNew
         End Using
     End Sub
 
-    Private Sub RegisterNew_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
